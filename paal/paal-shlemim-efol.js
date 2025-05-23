@@ -5,6 +5,8 @@ class PaalShlemimEfol {
     this.root1 = a;
     this.root2 = b;
     this.root3 = c;
+    this.verbType = "פעל";
+    this.gzera = "שלמים (אפעול)";
   }
   // should return the present masculine singular
   // root 1: no vowel (except dagesh, which should be inputted automatically)
