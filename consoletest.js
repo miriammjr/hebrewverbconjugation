@@ -4,6 +4,11 @@ document.onload = function () {
   input.innerHTML = "";
 };
 
+const result = document.getElementById("result");
+const question = document.getElementById("question");
+const start = document.getElementById("start");
+const checkButton = document.getElementById("check");
+
 const clear = document.getElementById("clear");
 const alef = document.getElementById("alef");
 const samekh = document.getElementById("samekh");
@@ -23,18 +28,45 @@ let letters = [alef, samekh, vav, gimel, resh, yod, memsofit, tav];
 let vowels = [vavholam, tzere, segol, shva, khirik];
 
 const test1 = new PaalShlemimEfol("ר", "ג", "ס");
-const curr = document.getElementById("all");
+// const curr = document.getElementById("all");
+let currAnswer = "";
 
 console.log(test1.presentMascSing());
 console.log(test1.presentFemPlural());
 console.log(test1.presetFemSing());
 console.log(test1.presentMascPlural());
 
-curr.innerHTML = `<p>${test1.presentMascSing()}</p>`;
+// curr.innerHTML = `<p>${test1.presentMascSing()}</p>`;
 
 function addText(x) {
   input.innerHTML = input.innerHTML + x;
-  console.log("PRESSED");
+}
+
+function getPresentVerb() {
+  input.innerHTML = "";
+  let x = Math.floor(Math.random() * 4);
+  console.log(x);
+  if (x == 0) {
+    question.innerHTML = "Masculine singular present of לִסְגּוֹר";
+    currAnswer = test1.presentMascSing();
+  } else if (x == 1) {
+    question.innerHTML = "Feminine singular present of לִסְגּוֹר";
+    currAnswer = test1.presentFemSing();
+  } else if (x == 2) {
+    question.innerHTML = "Masculine plural present of לִסְגּוֹר";
+    currAnswer = test1.presentMascPlural();
+  } else if (x == 3) {
+    question.innerHTML = "Feminine plural present of לִסְגּוֹר";
+    currAnswer = test1.presentFemPlural();
+  }
+}
+
+function check() {
+  if ((input.innerHTML = currAnswer)) {
+    result.innerHTML = "Correct.";
+  } else {
+    result.innerHTML = "Wrong. The right answer is " + currAnswer + ".";
+  }
 }
 
 for (let i = 0; i < letters.length; i++) {
@@ -52,3 +84,7 @@ for (let i = 0; i < vowels.length; i++) {
 clear.addEventListener("click", (event) => {
   input.innerHTML = "";
 });
+
+start.addEventListener("click", (event) => getPresentVerb());
+// start.addEventListener("click", (event) => console.log("PRESSED"));
+checkButton.addEventListener("click", (event) => check());
