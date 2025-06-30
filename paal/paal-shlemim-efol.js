@@ -22,7 +22,7 @@ class PaalShlemimEfol {
   // root 2: סגול
   // root 3: סגול
   // add tet
-  presetFemSing() {
+  presentFemSing() {
     return (
       this.root3 +
       "וֹ" +

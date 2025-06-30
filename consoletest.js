@@ -31,11 +31,6 @@ const test1 = new PaalShlemimEfol("ר", "ג", "ס");
 // const curr = document.getElementById("all");
 let currAnswer = "";
 
-console.log(test1.presentMascSing());
-console.log(test1.presentFemPlural());
-console.log(test1.presetFemSing());
-console.log(test1.presentMascPlural());
-
 // curr.innerHTML = `<p>${test1.presentMascSing()}</p>`;
 
 function addText(x) {
@@ -44,6 +39,7 @@ function addText(x) {
 
 function getPresentVerb() {
   input.innerHTML = "";
+  result.innerHTML = "";
   let x = Math.floor(Math.random() * 4);
   console.log(x);
   if (x == 0) {
@@ -62,7 +58,8 @@ function getPresentVerb() {
 }
 
 function check() {
-  if ((input.innerHTML = currAnswer)) {
+  console.log(input.innerHTML);
+  if (input.innerHTML == currAnswer) {
     result.innerHTML = "Correct.";
   } else {
     result.innerHTML = "Wrong. The right answer is " + currAnswer + ".";
