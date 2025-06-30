@@ -1,8 +1,14 @@
+body {
+  text-align: center;
+}
+
 #textbox {
   border: 5px solid black;
-  height: 50px;
+  height: 100px;
+  margin-bottom: 10px;
 }
 
 #input {
+  font-size: 50px;
   margin: auto;
 }

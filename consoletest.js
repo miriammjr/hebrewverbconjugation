@@ -8,7 +8,7 @@ const result = document.getElementById("result");
 const question = document.getElementById("question");
 const start = document.getElementById("start");
 const checkButton = document.getElementById("check");
-
+const backspace = document.getElementById("backspace");
 const clear = document.getElementById("clear");
 const alef = document.getElementById("alef");
 const samekh = document.getElementById("samekh");
@@ -82,6 +82,11 @@ clear.addEventListener("click", (event) => {
   input.innerHTML = "";
 });
 
+function deleteButton() {
+  input.innerHTML = input.innerHTML.substring(0, input.innerHTML.length - 2);
+}
+
 start.addEventListener("click", (event) => getPresentVerb());
 // start.addEventListener("click", (event) => console.log("PRESSED"));
 checkButton.addEventListener("click", (event) => check());
+backspace.addEventListener("click", (event) => deleteButton());
