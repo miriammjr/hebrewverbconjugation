@@ -1,0 +1,27 @@
+// VOWELS
+const holam = document.getElementById("holam");
+const tzere = document.getElementById("tzere");
+const segol = document.getElementById("segol");
+const shva = document.getElementById("shva");
+const khirik = document.getElementById("khirik");
+const patakh = document.getElementById("patakh");
+const dagesh = document.getElementById("dagesh");
+const kamatz = document.getElementById("kamatz");
+const kubutz = document.getElementById("kubutz");
+const vowels = [
+  holam,
+  tzere,
+  segol,
+  shva,
+  khirik,
+  patakh,
+  dagesh,
+  kamatz,
+  kubutz,
+];
+
+for (let i = 0; i < vowels.length; i++) {
+  vowels[i].addEventListener("click", (event) => {
+    addText(vowels[i].value);
+  });
+}

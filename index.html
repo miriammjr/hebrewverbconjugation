@@ -55,18 +55,35 @@
       <button id="shva" value="&#1456;"> &#1456; </button>
       <button id="khirik" value="&#1460;"> &#1460; </button>
       <button id="kubutz" value="&#1467;"> &#1467;</button>
-      <button id="shuruk" value="&#64309;">&#64309;</button>
       <button id="holam" value="&#1465;"> &#1465;</button>
       <button id="segol" value="&#1462;"> &#1462; </button>
       <button id="tzere" value="&#1461;"> &#1461;</button>
       <button id="kamatz" value="&#1464;"> &#1464; </button>
       <button id="patakh" value="&#1463;"> &#1463;</button>
+      <br>
+      <p>Note: add dagesh (&#1468; ) before other vowels!</p>
     </div>
   </br> 
   <button id="clear">clear</button>
   <button id="check">check</button>
   <button id="backspace">Backspace</button>
+
+  <div id="tenses">
+    <input type="checkbox" id="present" name="present" value="present">
+    <label for="present">Present Tense</label>
+    <input type="checkbox" id="past" name="past" value="past">
+    <label for="past">Past Tense</label>
+    <input type="checkbox" id="future" name="future" value="future">
+    <label for="future">Future Tense</label>
+    <input type="checkbox" id="imperative" name="imperative" value="imperative">
+    <label for="imperative">Imperative Tense</label>
+  </div>
   </body>
   <script src="paal/paal-shlemim-efol.js"></script>
-  <script src="consoletest.js"></script>
+  <script src="constants/letters.js"></script>
+  <script src="constants/vowels.js"></script>
+  <script src="constants/input.js"></script>
+  <script src="scripts/check.js"></script>
+  <script src="scripts/getQuestion.js"></script>
+  <script src="currtest.js"></script>
 </html>
