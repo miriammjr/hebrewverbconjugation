@@ -20,3 +20,7 @@ p {
 button {
   font-size: 50px;
 }
+
+.letter {
+  width: 50px;
+}
