@@ -6,6 +6,7 @@ const presentBox = document.getElementById("present");
 const pastBox = document.getElementById("past");
 const futureBox = document.getElementById("future");
 const imperativeBox = document.getElementById("imperative");
+const femFutureBox = document.getElementById("femfuture");
 
 let currAnswer = "";
 
@@ -60,7 +61,13 @@ function getPastVerb() {
 }
 
 function getFutureVerb() {
-  let x = Math.floor(Math.random() * 8);
+  let x = -1;
+  if (femFutureBox.checked) {
+    x = Math.floor(Math.random() * 10);
+  } else {
+    x = Math.floor(Math.random() * 8);
+  }
+
   if (x == 0) {
     question.innerHTML = "Singular first person future of לִסְגּוֹר";
     currAnswer = test1.futureFirstSing();
@@ -85,11 +92,23 @@ function getFutureVerb() {
   } else if (x == 7) {
     question.innerHTML = "Plural third person future of לִסְגּוֹר";
     currAnswer = test1.futureThirdPlural();
+  } else if (x == 8) {
+    question.innerHTML = "Plural second person feminine future of לִסְגּוֹר";
+    currAnswer = test1.futureSecondFemininePlural();
+  } else if (x == 9) {
+    question.innerHTML = "Plural third person feminine future of לִסְגּוֹר";
+    currAnswer = test1.futureThirdFemininePlural();
   }
 }
 
 function getImperativeVerb() {
-  let x = Math.floor(Math.random() * 3);
+  let x = -1;
+  if (femFutureBox.checked) {
+    x = Math.floor(Math.random() * 4);
+  } else {
+    x = Math.floor(Math.random() * 3);
+  }
+
   if (x == 0) {
     question.innerHTML = "Singular masculine imperative of לִסְגּוֹר";
     currAnswer = test1.imperativeMasculine();
@@ -99,6 +118,9 @@ function getImperativeVerb() {
   } else if (x == 2) {
     question.innerHTML = "Plural imperative of לִסְגּוֹר";
     currAnswer = test1.imperativePlural();
+  } else if (x == 3) {
+    question.innerHTML = "Plural feminine imperative of לִסְגּוֹר";
+    currAnswer = test1.imperativeFemininePlural();
   }
 }
 
