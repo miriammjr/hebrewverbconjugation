@@ -105,133 +105,34 @@ function getImperativeVerb() {
 function getVerb() {
   input.innerHTML = "";
   result.innerHTML = "";
-  if (imperativeBox.checked == false) {
-    if (presentBox.checked == true) {
-      if (pastBox.checked == true) {
-        if (futureBox.checked == true) {
-          let x = Math.floor(Math.random() * 3);
-          if (x == 0) {
-            getPresentVerb();
-          } else if (x == 1) {
-            getPastVerb();
-          } else {
-            getFutureVerb();
-          }
-        } else {
-          let x = Math.floor(Math.random() * 2);
-          if (x == 0) {
-            getPresentVerb();
-          } else if (x == 1) {
-            getPastVerb();
-          }
-        }
-      } else {
-        if (futureBox.checked == true) {
-          let x = Math.floor(Math.random() * 2);
-          if (x == 0) {
-            getPresentVerb();
-          } else if (x == 1) {
-            getFutureVerb();
-          }
-        } else {
-          getPresentVerb();
-        }
-      }
-    } else {
-      if (pastBox.checked == true) {
-        if (futureBox.checked == true) {
-          let x = Math.floor(Math.random() * 2);
-          if (x == 0) {
-            getFutureVerb();
-          } else if (x == 1) {
-            getPastVerb();
-          }
-        } else {
-          getPastVerb();
-        }
-      } else {
-        if (futureBox.checked == true) {
-          getFutureVerb();
-        } else {
-          question.innerHTML = "Select a verb tense below.";
-        }
-      }
-    }
+  let currentFunctions = [];
+  if (presentBox.checked == true) {
+    currentFunctions.push("present");
+  }
+  if (pastBox.checked == true) {
+    currentFunctions.push("past");
+  }
+  if (futureBox.checked == true) {
+    currentFunctions.push("future");
+  }
+  if (imperativeBox.checked == true) {
+    currentFunctions.push("imperative");
+  }
+  if (currentFunctions.length == 0) {
+    question.innerHTML = "Select a tense below.";
   } else {
-    if (presentBox.checked == true) {
-      if (pastBox.checked == true) {
-        if (futureBox.checked == true) {
-          let x = Math.floor(Math.random() * 4);
-          if (x == 0) {
-            getPresentVerb();
-          } else if (x == 1) {
-            getPastVerb();
-          } else if (x == 2) {
-            getFutureVerb();
-          } else {
-            getImperativeVerb();
-          }
-        } else {
-          let x = Math.floor(Math.random() * 3);
-          if (x == 0) {
-            getPresentVerb();
-          } else if (x == 1) {
-            getPastVerb();
-          } else if (x == 2) {
-            getImperativeVerb();
-          }
-        }
-      } else {
-        if (futureBox.checked == true) {
-          let x = Math.floor(Math.random() * 3);
-          if (x == 0) {
-            getPresentVerb();
-          } else if (x == 1) {
-            getFutureVerb();
-          } else if (x == 2) {
-            getImperativeVerb();
-          }
-        } else {
-          let x = Math.floor(Math.random() * 2);
-          if (x == 0) {
-            getPresentVerb();
-          } else if (x == 1) {
-            getImperativeVerb();
-          }
-        }
-      }
-    } else {
-      if (pastBox.checked == true) {
-        if (futureBox.checked == true) {
-          let x = Math.floor(Math.random() * 3);
-          if (x == 0) {
-            getFutureVerb();
-          } else if (x == 1) {
-            getPastVerb();
-          } else if (x == 2) {
-            getImperativeVerb();
-          }
-        } else {
-          let x = Math.floor(Math.random() * 2);
-          if (x == 0) {
-            getPastVerb();
-          } else {
-            getImperativeVerb();
-          }
-        }
-      } else {
-        if (futureBox.checked == true) {
-          let x = Math.floor(Math.random() * 2);
-          if (x == 0) {
-            getFutureVerb();
-          } else {
-            getImperativeVerb();
-          }
-        } else {
-          getImperativeVerb();
-        }
-      }
+    let x = Math.floor(Math.random() * currentFunctions.length);
+    let tense = currentFunctions[x];
+    if (tense == "present") {
+      getPresentVerb();
+    } else if (tense == "past") {
+      getPastVerb();
+    } else if (tense == "future") {
+      getFutureVerb();
+    } else if (tense == "imperative") {
+      getImperativeVerb();
     }
+    console.log(x);
   }
 }
 
