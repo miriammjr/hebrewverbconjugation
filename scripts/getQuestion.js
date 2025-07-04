@@ -140,7 +140,7 @@ function getImperativeVerb() {
 }
 
 function getVerb() {
-  input.innerHTML = "";
+  input.value = "";
   result.innerHTML = "";
   let currentFunctions = [];
   if (presentBox.checked == true) {
