@@ -116,7 +116,7 @@ class PaalShlemimEfol {
   }
 
   presentFemPluralEnglish() {
-    return "They (F) " = this.present;
+    return "They (F) " + this.present;
   }
 
   // root 1: kamatz, dagesh
@@ -554,6 +554,6 @@ class PaalShlemimEfol {
     );
   }
   imperativeFemininePluralEnglish() {
-    return this.present + "! (F, P";
+    return this.present + "! (F, P)";
   }
 }

@@ -127,8 +127,12 @@ if (test1.pastThirdSingularFemaleEnglish() != "She wrote") {
 if (test1.pastFirstPersonPluralEnglish() != "We wrote") {
   alert("Failed at past first person plural English");
 }
-if (test1.pastSecondPluralMale() != "You (M, P) wrote") {
-  alert("Failed at past second person plural masculine past English");
+if (test1.pastSecondPluralMaleEnglish() != "You (M, P) wrote") {
+  alert(
+    "Failed at past second person plural masculine past English (" +
+      test1.pastSecondPluralMale() +
+      ")"
+  );
 }
 if (test1.pastSecondPluralFemaleEnglish() != "You (F, P) wrote") {
   alert("failed at past second person plural feminine English");
@@ -166,15 +170,18 @@ if (test1.futureThirdPluralEnglish() != "They (M) will write") {
 if (test1.futureThirdFemininePluralEnglish() != "They (F) will write") {
   alert("failed at third person plural future feminine english");
 }
-if (test1.imperativeMasculineEnglish() != "write! (M, S") {
+if (test1.imperativeMasculineEnglish() != "write! (M, S)") {
   alert("failed at imperative masculine english");
 }
 if (test1.imperativeFeminineEnglish() != "write! (F, S)") {
   alert("failed at imperative feminine english");
 }
-if (test1.imperativePluralEnglish() != "write! (M, P") {
+if (test1.imperativePluralEnglish() != "write! (M, P)") {
   alert("failed at imperative plural masculine english");
 }
-if (test1.imperativeFemininePluralEnglish() != "write! (F, P") {
-  alert("failed at imperative plural feminine english");
+if (test1.imperativeFemininePluralEnglish() != "write! (F, P)") {
+  alert(
+    "failed at imperative plural feminine english: " +
+      test1.imperativeFemininePluralEnglish()
+  );
 }
