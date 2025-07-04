@@ -9,15 +9,15 @@ const dagesh = document.getElementById("dagesh");
 const kamatz = document.getElementById("kamatz");
 const kubutz = document.getElementById("kubutz");
 const vowels = [
-  holam,
-  tzere,
-  segol,
+  dagesh,
   shva,
   khirik,
-  patakh,
-  dagesh,
-  kamatz,
   kubutz,
+  holam,
+  segol,
+  tzere,
+  kamatz,
+  patakh,
 ];
 
 for (let i = 0; i < vowels.length; i++) {
