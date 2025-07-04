@@ -7,7 +7,7 @@
       href="styles.css"
     />
   </head>
-  <body>
+  <body onload="clearInput()">
     <h1>Test - only prompts with לכתוב</h1>
     <!-- <div id="all"></div> -->
      <div id="prompt">
@@ -115,7 +115,10 @@
       
     </div>
   </br> 
-  <p>Note: add dagesh (&#1468; ) before other vowels!</p>
+  <input type="checkbox" id="showLetters" name="showLetters" value="showLetters" onclick="checkLetters()">
+  <label for="showLetters">Check to display on-screen letter buttons.</label>
+  <p class="note">Note: add dagesh (&#1468; ) before other nikkudot.</p>
+  <p class="note">Type "q" to type sin.</p>
   <button id="clear">clear</button>
   <button id="check">check</button>
   <button id="backspace">Backspace</button>

@@ -222,7 +222,7 @@ function getImperativeVerb() {
 }
 
 function getVerb() {
-  input.value = "";
+  clearInput();
   result.innerHTML = "";
   gender.innerHTML = "";
   number.innerHTML = "";

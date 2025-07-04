@@ -29,6 +29,7 @@ button {
 
 #letters {
   padding-bottom: 10px;
+  display: none;
 }
 
 #details p {
@@ -58,4 +59,8 @@ button {
 .vowelLabel {
   float: left;
   display: block;
+}
+
+.note {
+  font-size: 25px;
 }
