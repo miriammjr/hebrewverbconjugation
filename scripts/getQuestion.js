@@ -14,16 +14,16 @@ function getPresentVerb() {
   let x = Math.floor(Math.random() * 4);
 
   if (x == 0) {
-    question.innerHTML = "Masculine singular present of לִסְגּוֹר";
+    question.innerHTML = "Masculine singular present of " + test1.infinitive();
     currAnswer = test1.presentMascSing();
   } else if (x == 1) {
-    question.innerHTML = "Feminine singular present of לִסְגּוֹר";
+    question.innerHTML = "Feminine singular present of " + test1.infinitive();
     currAnswer = test1.presentFemSing();
   } else if (x == 2) {
-    question.innerHTML = "Masculine plural present of לִסְגּוֹר";
+    question.innerHTML = "Masculine plural present of " + test1.infinitive();
     currAnswer = test1.presentMascPlural();
   } else if (x == 3) {
-    question.innerHTML = "Feminine plural present of לִסְגּוֹר";
+    question.innerHTML = "Feminine plural present of " + test1.infinitive();
     currAnswer = test1.presentFemPlural();
   }
 }
@@ -31,31 +31,37 @@ function getPresentVerb() {
 function getPastVerb() {
   let x = Math.floor(Math.random() * 9);
   if (x == 0) {
-    question.innerHTML = "Singular first person past of לִסְגּוֹר";
+    question.innerHTML = "Singular first person past of " + test1.infinitive();
     currAnswer = test1.pastFirstSingular();
   } else if (x == 1) {
-    question.innerHTML = "Singular second person masculine past of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular second person masculine past of " + test1.infinitive();
     currAnswer = test1.pastSecondSingularMale();
   } else if (x == 2) {
-    question.innerHTML = "Singular second person feminine past of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular second person feminine past of " + test1.infinitive();
     currAnswer = test1.pastSecondSingularFemale();
   } else if (x == 3) {
-    question.innerHTML = "Singular third person masculine past of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular third person masculine past of " + test1.infinitive();
     currAnswer = test1.pastThirdSingularMale();
   } else if (x == 4) {
-    question.innerHTML = "Singular third person feminine past of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular third person feminine past of " + test1.infinitive();
     currAnswer = test1.pastThirdSingularFemale();
   } else if (x == 5) {
-    question.innerHTML = "Plural first person past of לִסְגּוֹר";
+    question.innerHTML = "Plural first person past of " + test1.infinitive();
     currAnswer = test1.pastFirstPersonPlural();
   } else if (x == 6) {
-    question.innerHTML = "Plural second person masculine past of לִסְגּוֹר";
+    question.innerHTML =
+      "Plural second person masculine past of " + test1.infinitive();
     currAnswer = test1.pastSecondPluralMale();
   } else if (x == 7) {
-    question.innerHTML = "Plural second person feminine past of לִסְגּוֹר";
+    question.innerHTML =
+      "Plural second person feminine past of " + test1.infinitive();
     currAnswer = test1.pastSecondPluralFemale();
   } else if (x == 8) {
-    question.innerHTML = "Plural third person past of לִסְגּוֹר";
+    question.innerHTML = "Plural third person past of " + test1.infinitive();
     currAnswer = test1.pastThirdPlural();
   }
 }
@@ -69,34 +75,41 @@ function getFutureVerb() {
   }
 
   if (x == 0) {
-    question.innerHTML = "Singular first person future of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular first person future of " + test1.infinitive();
     currAnswer = test1.futureFirstSing();
   } else if (x == 1) {
-    question.innerHTML = "Singular masculine second person future of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular masculine second person future of " + test1.infinitive();
     currAnswer = test1.futureSecondMasculineSing();
   } else if (x == 2) {
-    question.innerHTML = "Singular feminine second person future of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular feminine second person future of " + test1.infinitive();
     currAnswer = test1.futureSecondFeminineSing();
   } else if (x == 3) {
-    question.innerHTML = "Singular masculine third person future of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular masculine third person future of " + test1.infinitive();
     currAnswer = test1.futureThirdMasculineSing();
   } else if (x == 4) {
-    question.innerHTML = "Singular feminine third person future of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular feminine third person future of " + test1.infinitive();
     currAnswer = test1.futureThirdFeminineSing();
   } else if (x == 5) {
-    question.innerHTML = "Plural first person future of לִסְגּוֹר";
+    question.innerHTML = "Plural first person future of " + test1.infinitive();
     currAnswer = test1.futureFirstPlural();
   } else if (x == 6) {
-    question.innerHTML = "Plural second person future of לִסְגּוֹר";
+    question.innerHTML = "Plural second person future of " + test1.infinitive();
     currAnswer = test1.futureSecondMascPlural();
   } else if (x == 7) {
-    question.innerHTML = "Plural third person future of לִסְגּוֹר";
+    question.innerHTML = "Plural third person future of " + test1.infinitive();
     currAnswer = test1.futureThirdPlural();
   } else if (x == 8) {
-    question.innerHTML = "Plural second person feminine future of לִסְגּוֹר";
+    question.innerHTML =
+      "Plural second person feminine future of " + test1.infinitive();
     currAnswer = test1.futureSecondFemininePlural();
   } else if (x == 9) {
-    question.innerHTML = "Plural third person feminine future of לִסְגּוֹר";
+    question.innerHTML =
+      "Plural third person feminine future of " + test1.infinitive();
     currAnswer = test1.futureThirdFemininePlural();
   }
 }
@@ -110,16 +123,18 @@ function getImperativeVerb() {
   }
 
   if (x == 0) {
-    question.innerHTML = "Singular masculine imperative of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular masculine imperative of " + test1.infinitive();
     currAnswer = test1.imperativeMasculine();
   } else if (x == 1) {
-    question.innerHTML = "Singular feminine imperative of לִסְגּוֹר";
+    question.innerHTML =
+      "Singular feminine imperative of " + test1.infinitive();
     currAnswer = test1.imperativeFeminine();
   } else if (x == 2) {
-    question.innerHTML = "Plural imperative of לִסְגּוֹר";
+    question.innerHTML = "Plural imperative of " + test1.infinitive();
     currAnswer = test1.imperativePlural();
   } else if (x == 3) {
-    question.innerHTML = "Plural feminine imperative of לִסְגּוֹר";
+    question.innerHTML = "Plural feminine imperative of " + test1.infinitive();
     currAnswer = test1.imperativeFemininePlural();
   }
 }

@@ -63,3 +63,5 @@ for (let i = 0; i < letters.length; i++) {
     addText(letters[i].value);
   });
 }
+
+const dageshkal = ["ב", "ג", "ד", "כ", "פ", "ת"];

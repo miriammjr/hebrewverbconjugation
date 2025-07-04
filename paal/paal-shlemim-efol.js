@@ -12,6 +12,22 @@ class PaalShlemimEfol {
     this.past = past;
     this.verbType = "פעל";
     this.gzera = "שלמים (אפעול)";
+
+    if (dageshkal.includes(this.root1)) {
+      this.root1dagesh = this.root1 + "\u{05BC}";
+    } else {
+      this.root1dagesh = this.root1;
+    }
+    if (dageshkal.includes(this.root2)) {
+      this.root2dagesh = this.root2 + "\u{05BC}";
+    } else {
+      this.root2dagesh = this.root2;
+    }
+    if (dageshkal.includes(this.root3)) {
+      this.root3dagesh = this.root3 + "\u{05BC}";
+    } else {
+      this.root3dagesh = this.root3;
+    }
   }
 
   // לִ +
@@ -23,30 +39,29 @@ class PaalShlemimEfol {
       "לִ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1
     );
   }
 
   // should return the present masculine singular
-  // root 1: no vowel (except dagesh)
+  // root 1: no vowel, dagesh
   // add vav
-  // root 2: צירי
-  // root 3: no vowel
+  // root 2: צירי, no dagesh
+  // root 3: no vowel, no dagesh
   presentMascSing() {
-    return this.root3 + "וֹ" + this.root2 + "\u{05B5}" + this.root1;
+    return this.root3dagesh + "וֹ" + this.root2 + "\u{05B5}" + this.root1;
   }
 
-  // root 1: no vowel
+  // root 1: no vowel, dagesh
   // add vav
   // root 2: סגול
   // root 3: סגול
   // add tet
   presentFemSing() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "וֹ" +
       this.root2 +
       "\u{05B6}" +
@@ -56,14 +71,14 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: no vowel
+  // root 1: no vowel, dagesh
   // add vav
   // root 2: shva
   // root 3: khirik
   // add ים
   presentMascPlural() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "וֹ" +
       this.root2 +
       "\u{05B0}" +
@@ -73,22 +88,24 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: no vowel
+  // root 1: no vowel, dagesh
   // add vav
   // root 2: shva
   // root 3: no vowel
   // add ot
   presentFemPlural() {
-    return this.root3 + "וֹ" + this.root2 + "\u{05B0}" + this.root1 + "וֹת";
+    return (
+      this.root3dagesh + "וֹ" + this.root2 + "\u{05B0}" + this.root1 + "וֹת"
+    );
   }
 
-  // root 1: kamatz
+  // root 1: kamatz, dagesh
   // root 2: patakh
   // root 3: shva
   // add תִּי
   pastFirstSingular() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B8}" +
       this.root2 +
       "\u{05B7}" +
@@ -98,13 +115,13 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: kamatz
+  // root 1: kamatz, dagesh
   // root 2: patakh
   // root 3: shva
   // add תָּ
   pastSecondSingularMale() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B8}" +
       this.root2 +
       "\u{05B7}" +
@@ -114,13 +131,13 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: kamatz
+  // root 1: kamatz, dagesh
   // root 2: patakh
   // root 3: shva
   // add תְּ
   pastSecondSingularFemale() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B8}" +
       this.root2 +
       "\u{05B7}" +
@@ -130,20 +147,20 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: kamatz
+  // root 1: kamatz, dagesh
   // root 2: patakh
   // root 3: none
   pastThirdSingularMale() {
-    return this.root3 + "\u{05B8}" + this.root2 + "\u{05B7}" + this.root1;
+    return this.root3dagesh + "\u{05B8}" + this.root2 + "\u{05B7}" + this.root1;
   }
 
-  // root 1: kamatz
+  // root 1: kamatz, dagesh
   // root 2: shva
   // root 3: kamatz
   // add ה
   pastThirdSingularFemale() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B8}" +
       this.root2 +
       "\u{05B0}" +
@@ -153,29 +170,29 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: add kamatz
+  // root 1: add kamatz, dagesh
   // root 2: add patakh
   // root 3: add shva
   // add נוּ
   pastFirstPersonPlural() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B8}" +
       this.root2 +
       "\u{05B7}" +
       this.root1 +
       "\u{05B0}" +
-      "נוְּ"
+      "נוּ"
     );
   }
 
-  // root 1: add shva
+  // root 1: add shva, dagesh
   // root 2: add patakh
   // root 3: add shva
   // add תֶּם
   pastSecondPluralMale() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B0}" +
       this.root2 +
       "\u{05B7}" +
@@ -185,13 +202,13 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: add shva
+  // root 1: add shva,dagesh
   // root 2: add patakh
   // root 3: add shva
   // add תֶּן
   pastSecondPluralFemale() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B0}" +
       this.root2 +
       "\u{05B7}" +
@@ -201,13 +218,18 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: add kamatz
+  // root 1: add kamatz, dagesh
   // root 2: add shva
   // root 3: none
   // add וּ
   pastThirdPlural() {
     return (
-      this.root3 + "\u{05B8}" + this.root2 + "\u{05B0}" + this.root1 + "וּ"
+      this.root3dagesh +
+      "\u{05B8}" +
+      this.root2 +
+      "\u{05B0}" +
+      this.root1 +
+      "וּ"
     );
   }
 
@@ -220,8 +242,7 @@ class PaalShlemimEfol {
       "אֶ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1
     );
@@ -236,8 +257,7 @@ class PaalShlemimEfol {
       "תִּ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1
     );
@@ -253,8 +273,7 @@ class PaalShlemimEfol {
       "תִּ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B0}" +
       this.root1 +
       "\u{05B4}" +
@@ -271,8 +290,7 @@ class PaalShlemimEfol {
       "יִ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1
     );
@@ -284,8 +302,7 @@ class PaalShlemimEfol {
       "תִּ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1
     );
@@ -300,8 +317,7 @@ class PaalShlemimEfol {
       "נִ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1
     );
@@ -317,8 +333,7 @@ class PaalShlemimEfol {
       "תִּ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B0}" +
       this.root1 +
       "וּ"
@@ -327,7 +342,7 @@ class PaalShlemimEfol {
 
   // add תִּ
   // root 1 + shva
-  // root 2 + kholam
+  // root 2 + kholam + dagesh
   // root 3 + shva
   // add "נָה"
   futureSecondFemininePlural() {
@@ -335,7 +350,7 @@ class PaalShlemimEfol {
       "תִּ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1 +
       "\u{05B0}" +
@@ -353,8 +368,7 @@ class PaalShlemimEfol {
       "יִ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
-      "\u{05BC}" +
+      this.root2dagesh +
       "\u{05B0}" +
       this.root1 +
       "וּ"
@@ -363,7 +377,7 @@ class PaalShlemimEfol {
 
   // add תִּ
   // root 1 + shva
-  // root 2 + kholam
+  // root 2 + kholam + dagesh
   // root 3 + shva
   // add "נָה"
   futureThirdFemininePlural() {
@@ -371,7 +385,7 @@ class PaalShlemimEfol {
       "תִּ" +
       this.root3 +
       "\u{05B0}" +
-      this.root2 +
+      this.root2dagesh +
       "\u{05B9}" +
       this.root1 +
       "\u{05B0}" +
@@ -379,20 +393,20 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: add shva
+  // root 1: add shva, dagesh
   // root 2: add  holam
   // root 3: none
   imperativeMasculine() {
-    return this.root3 + "\u{05B0}" + this.root2 + "\u{05B9}" + this.root1;
+    return this.root3dagesh + "\u{05B0}" + this.root2 + "\u{05B9}" + this.root1;
   }
 
-  // root 1: add khirik
+  // root 1: add khirik, dagesh
   // root 2: add shva
   // root 3: add khirik
   // add yod
   imperativeFeminine() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B4}" +
       this.root2 +
       "\u{05B0}" +
@@ -402,23 +416,28 @@ class PaalShlemimEfol {
     );
   }
 
-  // root 1: add khirik
+  // root 1: add khirik, dagesh
   // root 2: add shva
   // root 3: none
   // add vav + dagesh
   imperativePlural() {
     return (
-      this.root3 + "\u{05B4}" + this.root2 + "\u{05B0}" + this.root1 + "וּ"
+      this.root3dagesh +
+      "\u{05B4}" +
+      this.root2 +
+      "\u{05B0}" +
+      this.root1 +
+      "וּ"
     );
   }
 
-  // root 1: add shva
+  // root 1: add shva, dagesh
   // root 2: add kholam
   // root 3: add shva
   // add נָה
   imperativeFemininePlural() {
     return (
-      this.root3 +
+      this.root3dagesh +
       "\u{05B0}" +
       this.root2 +
       "\u{05B9}" +
