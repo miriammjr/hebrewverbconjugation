@@ -45,6 +45,10 @@ class PaalShlemimEfol {
     );
   }
 
+  infinitiveEnglish() {
+    return "to " + this.present;
+  }
+
   // should return the present masculine singular
   // root 1: no vowel, dagesh
   // add vav
@@ -52,6 +56,10 @@ class PaalShlemimEfol {
   // root 3: no vowel, no dagesh
   presentMascSing() {
     return this.root3dagesh + "וֹ" + this.root2 + "\u{05B5}" + this.root1;
+  }
+
+  presentMascSingEnglish() {
+    return "He " + this.presentthird;
   }
 
   // root 1: no vowel, dagesh
@@ -71,6 +79,10 @@ class PaalShlemimEfol {
     );
   }
 
+  presentFemSingEnglish() {
+    return "She " + this.presentthird;
+  }
+
   // root 1: no vowel, dagesh
   // add vav
   // root 2: shva
@@ -88,6 +100,10 @@ class PaalShlemimEfol {
     );
   }
 
+  presentMascPluralEnglish() {
+    return "They (M) " + this.present;
+  }
+
   // root 1: no vowel, dagesh
   // add vav
   // root 2: shva
@@ -97,6 +113,10 @@ class PaalShlemimEfol {
     return (
       this.root3dagesh + "וֹ" + this.root2 + "\u{05B0}" + this.root1 + "וֹת"
     );
+  }
+
+  presentFemPluralEnglish() {
+    return "They (F) " = this.present;
   }
 
   // root 1: kamatz, dagesh
@@ -115,6 +135,10 @@ class PaalShlemimEfol {
     );
   }
 
+  pastFirstSingularEnglish() {
+    return "I " + this.past;
+  }
+
   // root 1: kamatz, dagesh
   // root 2: patakh
   // root 3: shva
@@ -129,6 +153,10 @@ class PaalShlemimEfol {
       "\u{05B0}" +
       "תָּ"
     );
+  }
+
+  pastSecondSingularMaleEnglish() {
+    return "You (M, S) " + this.past;
   }
 
   // root 1: kamatz, dagesh
@@ -147,11 +175,19 @@ class PaalShlemimEfol {
     );
   }
 
+  pastSecondSingularFemaleEnglish() {
+    return "You (F, S) " + this.past;
+  }
+
   // root 1: kamatz, dagesh
   // root 2: patakh
   // root 3: none
   pastThirdSingularMale() {
     return this.root3dagesh + "\u{05B8}" + this.root2 + "\u{05B7}" + this.root1;
+  }
+
+  pastThirdSingularMaleEnglish() {
+    return "He " + this.past;
   }
 
   // root 1: kamatz, dagesh
@@ -170,6 +206,10 @@ class PaalShlemimEfol {
     );
   }
 
+  pastThirdSingularFemaleEnglish() {
+    return "She " + this.past;
+  }
+
   // root 1: add kamatz, dagesh
   // root 2: add patakh
   // root 3: add shva
@@ -184,6 +224,10 @@ class PaalShlemimEfol {
       "\u{05B0}" +
       "נוּ"
     );
+  }
+
+  pastFirstPersonPluralEnglish() {
+    return "We " + this.past;
   }
 
   // root 1: add shva, dagesh
@@ -202,6 +246,10 @@ class PaalShlemimEfol {
     );
   }
 
+  pastSecondPluralMaleEnglish() {
+    return "You (M, P) " + this.past;
+  }
+
   // root 1: add shva,dagesh
   // root 2: add patakh
   // root 3: add shva
@@ -216,6 +264,10 @@ class PaalShlemimEfol {
       "\u{05B0}" +
       "תֶּן"
     );
+  }
+
+  pastSecondPluralFemaleEnglish() {
+    return "You (F, P) " + this.past;
   }
 
   // root 1: add kamatz, dagesh
@@ -233,6 +285,9 @@ class PaalShlemimEfol {
     );
   }
 
+  pastThirdPluralEnglish() {
+    return "They " + this.past;
+  }
   // add אֶ
   // root 1: add shva
   // root 2: add dagesh and kholam
@@ -248,6 +303,10 @@ class PaalShlemimEfol {
     );
   }
 
+  futureFirstSingEnglish() {
+    return "I will " + this.present;
+  }
+
   // add תִּ
   // root 1: add shva
   // root 2: add dagesh and kholam
@@ -261,6 +320,10 @@ class PaalShlemimEfol {
       "\u{05B9}" +
       this.root1
     );
+  }
+
+  futureSecondMasculineSingEnglish() {
+    return "You (M, S) will " + this.present;
   }
 
   // add תִּ
@@ -281,6 +344,10 @@ class PaalShlemimEfol {
     );
   }
 
+  futureSecondFeminineSingEnglish() {
+    return "You (F, S) will " + this.present;
+  }
+
   // add יִ
   // root 1: add shva
   // root 2: add dagesh and kholam
@@ -296,6 +363,10 @@ class PaalShlemimEfol {
     );
   }
 
+  futureThirdMasculineSingEnglish() {
+    return "He will " + this.present;
+  }
+
   // same as second person singular masc
   futureThirdFeminineSing() {
     return (
@@ -306,6 +377,10 @@ class PaalShlemimEfol {
       "\u{05B9}" +
       this.root1
     );
+  }
+
+  futureThirdFeminineSingEnglish() {
+    return "She will " + this.present;
   }
 
   // add נִ
@@ -323,6 +398,10 @@ class PaalShlemimEfol {
     );
   }
 
+  futureFirstPluralEnglish() {
+    return "We will " + this.present;
+  }
+
   // add "תִּ"
   // root 1: add shva
   // root 2: add shva + dagesh
@@ -338,6 +417,10 @@ class PaalShlemimEfol {
       this.root1 +
       "וּ"
     );
+  }
+
+  futureSecondMascPluralEnglish() {
+    return "You (M, P) will " + this.present;
   }
 
   // add תִּ
@@ -358,6 +441,10 @@ class PaalShlemimEfol {
     );
   }
 
+  futureSecondFemininePluralEnglish() {
+    return "You (F, P) will " + this.present;
+  }
+
   // add יִ
   // root 1: add shva
   // root 2: add shva + dagesh
@@ -373,6 +460,10 @@ class PaalShlemimEfol {
       this.root1 +
       "וּ"
     );
+  }
+
+  futureThirdPluralEnglish() {
+    return "They (M) will " + this.present;
   }
 
   // add תִּ
@@ -393,11 +484,19 @@ class PaalShlemimEfol {
     );
   }
 
+  futureThirdFemininePluralEnglish() {
+    return "They (F) will " + this.present;
+  }
+
   // root 1: add shva, dagesh
   // root 2: add  holam
   // root 3: none
   imperativeMasculine() {
     return this.root3dagesh + "\u{05B0}" + this.root2 + "\u{05B9}" + this.root1;
+  }
+
+  imperativeMasculineEnglish() {
+    return this.present + "! (M, S)";
   }
 
   // root 1: add khirik, dagesh
@@ -416,6 +515,10 @@ class PaalShlemimEfol {
     );
   }
 
+  imperativeFeminineEnglish() {
+    return this.present + "! (F, S)";
+  }
+
   // root 1: add khirik, dagesh
   // root 2: add shva
   // root 3: none
@@ -429,6 +532,10 @@ class PaalShlemimEfol {
       this.root1 +
       "וּ"
     );
+  }
+
+  imperativePluralEnglish() {
+    return this.present + "! (M, P)";
   }
 
   // root 1: add shva, dagesh
@@ -445,5 +552,8 @@ class PaalShlemimEfol {
       "\u{05B0}" +
       "נָה"
     );
+  }
+  imperativeFemininePluralEnglish() {
+    return this.present + "! (F, P";
   }
 }

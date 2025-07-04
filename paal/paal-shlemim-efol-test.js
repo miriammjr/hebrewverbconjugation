@@ -94,3 +94,87 @@ if (test1.imperativePlural() != "כִּתְבוּ") {
 if (test1.imperativeFemininePlural() != "כְּתֹבְנָה") {
   alert("Failed at plural feminine imperative");
 }
+if (test1.infinitiveEnglish() != "to write") {
+  alert("Failed at English infinitive");
+}
+if (test1.presentMascSingEnglish() != "He writes") {
+  alert("Failed at present masc singular English");
+}
+if (test1.presentFemSingEnglish() != "She writes") {
+  alert("Failed at present feminine singular English");
+}
+if (test1.presentMascPluralEnglish() != "They (M) write") {
+  alert("Failed at present masculine plural English");
+}
+if (test1.presentFemPluralEnglish() != "They (F) write") {
+  alert("Failed at present feminine plural English");
+}
+if (test1.pastFirstSingularEnglish() != "I wrote") {
+  alert("Failed at first person past English");
+}
+if (test1.pastSecondSingularMaleEnglish() != "You (M, S) wrote") {
+  alert("FAiled at past singular second person English");
+}
+if (test1.pastSecondSingularFemaleEnglish() != "You (F, S) wrote") {
+  alert("Failed at past singular feminine second person English");
+}
+if (test1.pastThirdSingularMaleEnglish() != "He wrote") {
+  alert("Failed at past third singular male English");
+}
+if (test1.pastThirdSingularFemaleEnglish() != "She wrote") {
+  alert("FAiled at past third person singular feminine English");
+}
+if (test1.pastFirstPersonPluralEnglish() != "We wrote") {
+  alert("Failed at past first person plural English");
+}
+if (test1.pastSecondPluralMale() != "You (M, P) wrote") {
+  alert("Failed at past second person plural masculine past English");
+}
+if (test1.pastSecondPluralFemaleEnglish() != "You (F, P) wrote") {
+  alert("failed at past second person plural feminine English");
+}
+if (test1.pastThirdPluralEnglish() != "They wrote") {
+  alert("failed at past third person plural English");
+}
+if (test1.futureFirstSingEnglish() != "I will write") {
+  alert("FAiled at future first person singular English");
+}
+if (test1.futureSecondMasculineSingEnglish() != "You (M, S) will write") {
+  alert("failed at second person masculine singular future English");
+}
+if (test1.futureSecondFeminineSingEnglish() != "You (F, S) will write") {
+  alert("failed at second person feminine singular future English");
+}
+if (test1.futureThirdMasculineSingEnglish() != "He will write") {
+  alert("failed at third person singular masculine future English");
+}
+if (test1.futureThirdFeminineSingEnglish() != "She will write") {
+  alert("failed at third person singular feminine future english");
+}
+if (test1.futureFirstPluralEnglish() != "We will write") {
+  alert("failed at first person plural future English");
+}
+if (test1.futureSecondMascPluralEnglish() != "You (M, P) will write") {
+  alert("failed at second person plural masculine future english");
+}
+if (test1.futureSecondFemininePluralEnglish() != "You (F, P) will write") {
+  alert("failed at second person plural feminine future english");
+}
+if (test1.futureThirdPluralEnglish() != "They (M) will write") {
+  alert("failed at third person plural future masculine english");
+}
+if (test1.futureThirdFemininePluralEnglish() != "They (F) will write") {
+  alert("failed at third person plural future feminine english");
+}
+if (test1.imperativeMasculineEnglish() != "write! (M, S") {
+  alert("failed at imperative masculine english");
+}
+if (test1.imperativeFeminineEnglish() != "write! (F, S)") {
+  alert("failed at imperative feminine english");
+}
+if (test1.imperativePluralEnglish() != "write! (M, P") {
+  alert("failed at imperative plural masculine english");
+}
+if (test1.imperativeFemininePluralEnglish() != "write! (F, P") {
+  alert("failed at imperative plural feminine english");
+}
