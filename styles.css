@@ -6,15 +6,16 @@ p {
   font-size: 50px;
 }
 
-#textbox {
+/* #textbox {
   border: 5px solid black;
   height: 100px;
   margin-bottom: 10px;
-}
+} */
 
 #input {
   font-size: 50px;
   margin: auto;
+  margin-bottom: 50px;
 }
 
 button {
@@ -23,4 +24,21 @@ button {
 
 .letter {
   width: 50px;
+}
+
+#details p {
+  font-size: 25px;
+}
+
+#details {
+  padding: 0;
+  margin: auto;
+
+  margin-top: 0;
+}
+
+#question {
+  font-size: 100px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
 }
