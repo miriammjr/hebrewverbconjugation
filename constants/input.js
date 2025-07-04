@@ -18,6 +18,6 @@ clear.addEventListener("click", (event) => {
 const backspace = document.getElementById("backspace");
 // delete button
 function deleteButton() {
-  input.innerHTML = input.innerHTML.substring(0, input.innerHTML.length - 2);
+  input.innerHTML = input.innerHTML.substring(0, input.innerHTML.length - 1);
 }
 backspace.addEventListener("click", (event) => deleteButton());
