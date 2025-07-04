@@ -15,7 +15,7 @@ p {
 #input {
   font-size: 50px;
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -62,5 +62,13 @@ button {
 }
 
 .note {
+  font-size: 25px;
+}
+
+#textbox {
+  margin-bottom: 15px;
+}
+#backspace,
+#clear {
   font-size: 25px;
 }
