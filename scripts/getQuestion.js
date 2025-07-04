@@ -14,100 +14,86 @@ const person = document.getElementById("person");
 
 let currAnswer = "";
 
+// 4 present, 9 past, 10 future (8 without fem plurals), 4 imperative (3 w/o fem plurals), 1 imperative, 1 gerund
+
+const presentConjugations = [
+  test1.presentMascSing(),
+  test1.presentFemSing(),
+  test1.presentMascPlural(),
+  test1.presentFemPlural(),
+];
+
+const pastConjugations = [
+  test1.pastFirstSingular(),
+  test1.pastSecondSingularMale(),
+  test1.pastSecondSingularFemale(),
+  test1.pastThirdSingularMale(),
+  test1.pastThirdSingularFemale(),
+  test1.pastFirstPersonPlural(),
+  test1.pastSecondPluralMale(),
+  test1.pastSecondPluralFemale(),
+  test1.pastThirdPlural(),
+];
+
+const futureConjugations = [
+  test1.futureFirstSing(),
+  test1.futureSecondMasculineSing(),
+  test1.futureSecondFeminineSing(),
+  test1.futureThirdMasculineSing(),
+  test1.futureThirdFeminineSing(),
+  test1.futureFirstPlural(),
+  test1.futureSecondMascPlural(),
+  test1.futureThirdPlural(),
+  test1.futureSecondFemininePlural(),
+  test1.futureThirdFemininePlural(),
+];
+
+const imperativeConjugations = [
+  test1.imperativeMasculine(),
+  test1.imperativeFeminine(),
+  test1.imperativePlural(),
+  test1.imperativeFemininePlural(),
+];
+
 function getPresentVerb() {
   tense.innerHTML = "present tense";
   let x = Math.floor(Math.random() * 4);
-  if (x == 0) {
-    // question.innerHTML = "Masculine singular present of " + test1.infinitive();
-    currAnswer = test1.presentMascSing();
-    person.innerHTML = "";
+  console.log(x);
+  if (x == 0 || x == 2) {
     gender.innerHTML = "masculine";
-    number.innerHTML = "singular";
-  } else if (x == 1) {
-    // question.innerHTML = "Feminine singular present of " + test1.infinitive();
-    currAnswer = test1.presentFemSing();
-    person.innerHTML = "";
+  } else {
     gender.innerHTML = "feminine";
+  }
+  if (x == 0 || x == 1) {
     number.innerHTML = "singular";
-  } else if (x == 2) {
-    // question.innerHTML = "Masculine plural present of " + test1.infinitive();
-    currAnswer = test1.presentMascPlural();
-    person.innerHTML = "";
-    gender.innerHTML = "masculine";
-    number.innerHTML = "plural";
-  } else if (x == 3) {
-    // question.innerHTML = "Feminine plural present of " + test1.infinitive();
-    currAnswer = test1.presentFemPlural();
-    person.innerHTML = "";
-    gender.innerHTML = "feminine";
+  } else {
     number.innerHTML = "plural";
   }
+
+  currAnswer = presentConjugations[x];
 }
 
 function getPastVerb() {
   tense.innerHTML = "past tense";
   let x = Math.floor(Math.random() * 9);
-  if (x == 0) {
-    // question.innerHTML = "Singular first person past of " + test1.infinitive();
-    currAnswer = test1.pastFirstSingular();
-    gender.innerHTML = "";
+  if (x < 5) {
     number.innerHTML = "singular";
-    person.innerHTML = "first person";
-  } else if (x == 1) {
-    // question.innerHTML =
-    "Singular second person masculine past of " + test1.infinitive();
-    currAnswer = test1.pastSecondSingularMale();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "singular";
-    person.innerHTML = "second person";
-  } else if (x == 2) {
-    // question.innerHTML =
-    "Singular second person feminine past of " + test1.infinitive();
-    currAnswer = test1.pastSecondSingularFemale();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "singular";
-    person.innerHTML = "second person";
-  } else if (x == 3) {
-    // question.innerHTML =
-    "Singular third person masculine past of " + test1.infinitive();
-    currAnswer = test1.pastThirdSingularMale();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "singular";
-    person.innerHTML = "third person";
-  } else if (x == 4) {
-    // question.innerHTML =
-    "Singular third person feminine past of " + test1.infinitive();
-    currAnswer = test1.pastThirdSingularFemale();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "singular";
-    person.innerHTML = "third person";
-  } else if (x == 5) {
-    // question.innerHTML = "Plural first person past of " + test1.infinitive();
-    currAnswer = test1.pastFirstPersonPlural();
-    gender.innerHTML = "";
+  } else {
     number.innerHTML = "plural";
-    person.innerHTML = "first person";
-  } else if (x == 6) {
-    // question.innerHTML =
-    "Plural second person masculine past of " + test1.infinitive();
-    currAnswer = test1.pastSecondPluralMale();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "plural";
-    person.innerHTML = "second person";
-  } else if (x == 7) {
-    // question.innerHTML =
-    "Plural second person feminine past of " + test1.infinitive();
-    currAnswer = test1.pastSecondPluralFemale();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "plural";
-    person.innerHTML = "second person";
-  } else if (x == 8) {
-    // question.innerHTML = "Plural third person past of " + test1.infinitive();
-    currAnswer = test1.pastThirdPlural();
-    gender.innerHTML = "";
-    number.innerHTML = "plural";
-    person.innerHTML = "third person";
   }
+  if (x == 0 || x == 5) {
+    person.innerHTML = "first person";
+  } else if (x == 8 || x == 3) {
+    person.innerHTML = "third person";
+  } else {
+    person.innerHTML = "second person";
+  }
+  if (x == 1 || x == 3 || x == 7) {
+    gender.innerHTML = "masculine";
+  } else if (x == 2 || x == 4 || x == 8) {
+    gender.innerHTML = "feminine";
+  }
+  currAnswer = pastConjugations[x];
 }
 
 function getFutureVerb() {
@@ -118,73 +104,26 @@ function getFutureVerb() {
   } else {
     x = Math.floor(Math.random() * 8);
   }
-
-  if (x == 0) {
-    // question.innerHTML =
-    "Singular first person future of " + test1.infinitive();
-    currAnswer = test1.futureFirstSing();
-    gender.innerHTML = "";
-    number.innerHTML = "singular";
+  if (x == 0 || x == 5) {
     person.innerHTML = "first person";
-  } else if (x == 1) {
-    // question.innerHTML =
-    "Singular masculine second person future of " + test1.infinitive();
-    currAnswer = test1.futureSecondMasculineSing();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "singular";
+  } else if (x == 1 || x == 2 || x == 6 || x == 8) {
     person.innerHTML = "second person";
-  } else if (x == 2) {
-    // question.innerHTML =
-    "Singular feminine second person future of " + test1.infinitive();
-    currAnswer = test1.futureSecondFeminineSing();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "singular";
-    person.innerHTML = "second person";
-  } else if (x == 3) {
-    // question.innerHTML =
-    "Singular masculine third person future of " + test1.infinitive();
-    currAnswer = test1.futureThirdMasculineSing();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "singular";
-  } else if (x == 4) {
-    // question.innerHTML =
-    "Singular feminine third person future of " + test1.infinitive();
-    currAnswer = test1.futureThirdFeminineSing();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "singular";
-  } else if (x == 5) {
-    // question.innerHTML = "Plural first person future of " + test1.infinitive();
-    currAnswer = test1.futureFirstPlural();
-    gender.innerHTML = "";
-    number.innerHTML = "plural";
-    person.innerHTML = "first person";
-  } else if (x == 6) {
-    // question.innerHTML = "Plural second person future of " + test1.infinitive();
-    currAnswer = test1.futureSecondMascPlural();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "plural";
-    person.innerHTML = "second person";
-  } else if (x == 7) {
-    // question.innerHTML = "Plural third person future of " + test1.infinitive();
-    currAnswer = test1.futureThirdPlural();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "plural";
-    person.innerHTML = "third person";
-  } else if (x == 8) {
-    // question.innerHTML =
-    "Plural second person feminine future of " + test1.infinitive();
-    currAnswer = test1.futureSecondFemininePlural();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "plural";
-    person.innerHTML = "second person";
-  } else if (x == 9) {
-    // question.innerHTML =
-    "Plural third person feminine future of " + test1.infinitive();
-    currAnswer = test1.futureThirdFemininePlural();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "plural";
+  } else {
     person.innerHTML = "third person";
   }
+  if (x == 1 || x == 3 || x == 6 || x == 7) {
+    gender.innerHTML = "masculine";
+  } else if (x == 0 || x == 5) {
+    gender.innerHTML = "";
+  } else {
+    gender.innerHTML = "feminine";
+  }
+  if (x < 5) {
+    number.innerHTML = "singular";
+  } else {
+    number.innerHTML = "plural";
+  }
+  currAnswer = futureConjugations[x];
 }
 
 function getImperativeVerb() {
@@ -196,29 +135,17 @@ function getImperativeVerb() {
     x = Math.floor(Math.random() * 3);
   }
   person.innerHTML = "";
-  if (x == 0) {
-    // question.innerHTML =
-    "Singular masculine imperative of " + test1.infinitive();
-    currAnswer = test1.imperativeMasculine();
-    gender.innerHTML = "masculine";
+  if (x < 2) {
     number.innerHTML = "singular";
-  } else if (x == 1) {
-    // question.innerHTML =
-    "Singular feminine imperative of " + test1.infinitive();
-    currAnswer = test1.imperativeFeminine();
-    gender.innerHTML = "feminine";
-    number.innerHTML = "singular";
-  } else if (x == 2) {
-    // question.innerHTML = "Plural imperative of " + test1.infinitive();
-    currAnswer = test1.imperativePlural();
-    gender.innerHTML = "masculine";
-    number.innerHTML = "plural";
-  } else if (x == 3) {
-    // question.innerHTML = "Plural feminine imperative of " + test1.infinitive();
-    currAnswer = test1.imperativeFemininePlural();
-    gender.innerHTML = "feminine";
+  } else {
     number.innerHTML = "plural";
   }
+  if (x == 0 || x == 2) {
+    gender.innerHTML = "masculine";
+  } else {
+    gender.innerHTML = "feminine";
+  }
+  currAnswer = imperativeConjugations[x];
 }
 
 function getVerb() {
