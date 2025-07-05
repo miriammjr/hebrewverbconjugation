@@ -1,15 +1,14 @@
 // PAAL SHLEMIM EFOL
 
-// DAGESH HAS NOT BEEN ADDED TO ROOTS!!! THIS ONLY WORKS FOR לסגור!!!!
 class PaalShlemimEfol {
-  constructor(a, b, c, gerund, present, presentthird, past) {
+  constructor(a, b, c, gerund, Present, Presentthird, Past) {
     this.root1 = a;
     this.root2 = b;
     this.root3 = c;
     this.gerund = gerund;
-    this.present = present;
-    this.presentthird = presentthird;
-    this.past = past;
+    this.Present = Present;
+    this.Presentthird = Presentthird;
+    this.Past = Past;
     this.verbType = "פעל";
     this.gzera = "שלמים (אפעול)";
 
@@ -45,12 +44,12 @@ class PaalShlemimEfol {
     );
   }
 
-  // should return the present masculine singular
+  // should return the Present masculine singular
   // root 1: no vowel, dagesh
   // add vav
   // root 2: צירי, no dagesh
   // root 3: no vowel, no dagesh
-  presentMascSing() {
+  PresentSingularMasculine() {
     return this.root3dagesh + "וֹ" + this.root2 + "\u{05B5}" + this.root1;
   }
 
@@ -59,7 +58,7 @@ class PaalShlemimEfol {
   // root 2: סגול
   // root 3: סגול
   // add tet
-  presentFemSing() {
+  PresentSingularFeminine() {
     return (
       this.root3dagesh +
       "וֹ" +
@@ -76,7 +75,7 @@ class PaalShlemimEfol {
   // root 2: shva
   // root 3: khirik
   // add ים
-  presentMascPlural() {
+  PresentPluralMasculine() {
     return (
       this.root3dagesh +
       "וֹ" +
@@ -93,7 +92,7 @@ class PaalShlemimEfol {
   // root 2: shva
   // root 3: no vowel
   // add ot
-  presentFemPlural() {
+  PresentPluralFeminine() {
     return (
       this.root3dagesh + "וֹ" + this.root2 + "\u{05B0}" + this.root1 + "וֹת"
     );
@@ -103,7 +102,7 @@ class PaalShlemimEfol {
   // root 2: patakh
   // root 3: shva
   // add תִּי
-  pastFirstSingular() {
+  PastFirstSingular() {
     return (
       this.root3dagesh +
       "\u{05B8}" +
@@ -119,7 +118,7 @@ class PaalShlemimEfol {
   // root 2: patakh
   // root 3: shva
   // add תָּ
-  pastSecondSingularMale() {
+  PastSecondSingularMasculine() {
     return (
       this.root3dagesh +
       "\u{05B8}" +
@@ -135,7 +134,7 @@ class PaalShlemimEfol {
   // root 2: patakh
   // root 3: shva
   // add תְּ
-  pastSecondSingularFemale() {
+  PastSecondSingularFeminine() {
     return (
       this.root3dagesh +
       "\u{05B8}" +
@@ -150,7 +149,7 @@ class PaalShlemimEfol {
   // root 1: kamatz, dagesh
   // root 2: patakh
   // root 3: none
-  pastThirdSingularMale() {
+  PastThirdSingularMasculine() {
     return this.root3dagesh + "\u{05B8}" + this.root2 + "\u{05B7}" + this.root1;
   }
 
@@ -158,7 +157,7 @@ class PaalShlemimEfol {
   // root 2: shva
   // root 3: kamatz
   // add ה
-  pastThirdSingularFemale() {
+  PastThirdSingularFeminine() {
     return (
       this.root3dagesh +
       "\u{05B8}" +
@@ -174,7 +173,7 @@ class PaalShlemimEfol {
   // root 2: add patakh
   // root 3: add shva
   // add נוּ
-  pastFirstPersonPlural() {
+  PastFirstPlural() {
     return (
       this.root3dagesh +
       "\u{05B8}" +
@@ -190,7 +189,7 @@ class PaalShlemimEfol {
   // root 2: add patakh
   // root 3: add shva
   // add תֶּם
-  pastSecondPluralMale() {
+  PastSecondPluralMasculine() {
     return (
       this.root3dagesh +
       "\u{05B0}" +
@@ -206,7 +205,7 @@ class PaalShlemimEfol {
   // root 2: add patakh
   // root 3: add shva
   // add תֶּן
-  pastSecondPluralFemale() {
+  PastSecondPluralFeminine() {
     return (
       this.root3dagesh +
       "\u{05B0}" +
@@ -222,7 +221,7 @@ class PaalShlemimEfol {
   // root 2: add shva
   // root 3: none
   // add וּ
-  pastThirdPlural() {
+  PastThirdPlural() {
     return (
       this.root3dagesh +
       "\u{05B8}" +
@@ -237,7 +236,7 @@ class PaalShlemimEfol {
   // root 1: add shva
   // root 2: add dagesh and kholam
   // root 3: none
-  futureFirstSing() {
+  FutureFirstSingular() {
     return (
       "אֶ" +
       this.root3 +
@@ -252,7 +251,7 @@ class PaalShlemimEfol {
   // root 1: add shva
   // root 2: add dagesh and kholam
   // root 3: none
-  futureSecondMasculineSing() {
+  FutureSecondSingularMasculine() {
     return (
       "תִּ" +
       this.root3 +
@@ -268,7 +267,7 @@ class PaalShlemimEfol {
   // root 2: add dagesh and shva
   // root 3: add khirik
   // add י
-  futureSecondFeminineSing() {
+  FutureSecondSingularFeminine() {
     return (
       "תִּ" +
       this.root3 +
@@ -285,7 +284,7 @@ class PaalShlemimEfol {
   // root 1: add shva
   // root 2: add dagesh and kholam
   // root 3: none
-  futureThirdMasculineSing() {
+  FutureThirdSingularMasculine() {
     return (
       "יִ" +
       this.root3 +
@@ -297,7 +296,7 @@ class PaalShlemimEfol {
   }
 
   // same as second person singular masc
-  futureThirdFeminineSing() {
+  FutureThirdSingularFeminine() {
     return (
       "תִּ" +
       this.root3 +
@@ -312,7 +311,7 @@ class PaalShlemimEfol {
   // root 1: add shva
   // root 2: add dagesh and kholam
   // root 3: none
-  futureFirstPlural() {
+  FutureFirstPlural() {
     return (
       "נִ" +
       this.root3 +
@@ -328,7 +327,7 @@ class PaalShlemimEfol {
   // root 2: add shva + dagesh
   // root 3: none
   // add וּ
-  futureSecondMascPlural() {
+  FutureSecondPluralMasculine() {
     return (
       "תִּ" +
       this.root3 +
@@ -345,7 +344,7 @@ class PaalShlemimEfol {
   // root 2 + kholam + dagesh
   // root 3 + shva
   // add "נָה"
-  futureSecondFemininePlural() {
+  FutureSecondPluralFeminine() {
     return (
       "תִּ" +
       this.root3 +
@@ -363,7 +362,7 @@ class PaalShlemimEfol {
   // root 2: add shva + dagesh
   // root 3: none
   // add וּ
-  futureThirdPlural() {
+  FutureThirdPluralMasculine() {
     return (
       "יִ" +
       this.root3 +
@@ -380,7 +379,7 @@ class PaalShlemimEfol {
   // root 2 + kholam + dagesh
   // root 3 + shva
   // add "נָה"
-  futureThirdFemininePlural() {
+  FutureThirdPluralFeminine() {
     return (
       "תִּ" +
       this.root3 +
@@ -396,7 +395,7 @@ class PaalShlemimEfol {
   // root 1: add shva, dagesh
   // root 2: add  holam
   // root 3: none
-  imperativeMasculine() {
+  ImperativeSingularMasculine() {
     return this.root3dagesh + "\u{05B0}" + this.root2 + "\u{05B9}" + this.root1;
   }
 
@@ -404,7 +403,7 @@ class PaalShlemimEfol {
   // root 2: add shva
   // root 3: add khirik
   // add yod
-  imperativeFeminine() {
+  ImperativeSingularFeminine() {
     return (
       this.root3dagesh +
       "\u{05B4}" +
@@ -420,7 +419,7 @@ class PaalShlemimEfol {
   // root 2: add shva
   // root 3: none
   // add vav + dagesh
-  imperativePlural() {
+  ImperativePluralMasculine() {
     return (
       this.root3dagesh +
       "\u{05B4}" +
@@ -435,7 +434,7 @@ class PaalShlemimEfol {
   // root 2: add kholam
   // root 3: add shva
   // add נָה
-  imperativeFemininePlural() {
+  ImperativePluralFeminine() {
     return (
       this.root3dagesh +
       "\u{05B0}" +
@@ -451,89 +450,89 @@ class PaalShlemimEfol {
   // SHOULD BE THE SAME FOR ALL VERBS (EXCEPT "TO BE")
 
   infinitiveEnglish() {
-    return "to " + this.present;
+    return "to " + this.Present;
   }
 
-  presentMascSingEnglish() {
-    return "He " + this.presentthird;
+  PresentSingularMasculineEnglish() {
+    return "He " + this.Presentthird;
   }
 
-  presentFemSingEnglish() {
-    return "She " + this.presentthird;
+  PresentSingularFeminineEnglish() {
+    return "She " + this.Presentthird;
   }
-  presentMascPluralEnglish() {
-    return "They (M) " + this.present;
+  PresentPluralMasculineEnglish() {
+    return "They (M) " + this.Present;
   }
-  presentFemPluralEnglish() {
-    return "They (F) " + this.present;
+  PresentPluralFeminineEnglish() {
+    return "They (F) " + this.Present;
   }
-  pastFirstSingularEnglish() {
-    return "I " + this.past;
+  PastFirstSingularEnglish() {
+    return "I " + this.Past;
   }
-  pastSecondSingularMaleEnglish() {
-    return "You (M, S) " + this.past;
+  PastSecondSingularMasculineEnglish() {
+    return "You (M, S) " + this.Past;
   }
-  pastSecondSingularFemaleEnglish() {
-    return "You (F, S) " + this.past;
+  PastSecondSingularFeminineEnglish() {
+    return "You (F, S) " + this.Past;
   }
-  pastThirdSingularMaleEnglish() {
-    return "He " + this.past;
+  PastThirdSingularMasculineEnglish() {
+    return "He " + this.Past;
   }
-  pastThirdSingularFemaleEnglish() {
-    return "She " + this.past;
+  PastThirdSingularFeminineEnglish() {
+    return "She " + this.Past;
   }
-  pastFirstPersonPluralEnglish() {
-    return "We " + this.past;
+  PastFirstPluralEnglish() {
+    return "We " + this.Past;
   }
-  pastSecondPluralMaleEnglish() {
-    return "You (M, P) " + this.past;
+  PastSecondPluralMasculineEnglish() {
+    return "You (M, P) " + this.Past;
   }
-  pastSecondPluralFemaleEnglish() {
-    return "You (F, P) " + this.past;
+  PastSecondPluralFeminineEnglish() {
+    return "You (F, P) " + this.Past;
   }
-  pastThirdPluralEnglish() {
-    return "They " + this.past;
+  PastThirdPluralEnglish() {
+    return "They " + this.Past;
   }
-  futureFirstSingEnglish() {
-    return "I will " + this.present;
+  FutureFirstSingularEnglish() {
+    return "I will " + this.Present;
   }
-  futureSecondMasculineSingEnglish() {
-    return "You (M, S) will " + this.present;
+  FutureSecondSingularMasculineEnglish() {
+    return "You (M, S) will " + this.Present;
   }
-  futureSecondFeminineSingEnglish() {
-    return "You (F, S) will " + this.present;
+  FutureSecondSingularFeminineEnglish() {
+    return "You (F, S) will " + this.Present;
   }
-  futureThirdMasculineSingEnglish() {
-    return "He will " + this.present;
+  FutureThirdSingularMasculineEnglish() {
+    return "He will " + this.Present;
   }
-  futureThirdFeminineSingEnglish() {
-    return "She will " + this.present;
+  FutureThirdSingularFeminineEnglish() {
+    return "She will " + this.Present;
   }
-  futureFirstPluralEnglish() {
-    return "We will " + this.present;
+  FutureFirstPluralEnglish() {
+    return "We will " + this.Present;
   }
-  futureSecondMascPluralEnglish() {
-    return "You (M, P) will " + this.present;
+  FutureSecondPluralMasculineEnglish() {
+    return "You (M/N, P) will " + this.Present;
   }
-  futureSecondFemininePluralEnglish() {
-    return "You (F, P) will " + this.present;
+  FutureSecondPluralFeminineEnglish() {
+    return "You (F, P) will " + this.Present;
   }
-  futureThirdPluralEnglish() {
-    return "They (M) will " + this.present;
+  FutureThirdPluralMasculineEnglish() {
+    return "They (M/N) will " + this.Present;
   }
-  futureThirdFemininePluralEnglish() {
-    return "They (F) will " + this.present;
+  FutureThirdPluralFeminineEnglish() {
+    return "They (F) will " + this.Present;
   }
-  imperativeMasculineEnglish() {
-    return this.present + "! (M, S)";
+  ImperativeSingularMasculineEnglish() {
+    return this.Present + "! (M, S)";
   }
-  imperativeFeminineEnglish() {
-    return this.present + "! (F, S)";
+  ImperativeSingularFeminineEnglish() {
+    return this.Present + "! (F, S)";
   }
-  imperativePluralEnglish() {
-    return this.present + "! (M, P)";
+  ImperativePluralMasculineEnglish() {
+    return this.Present + "! (M/N, P)";
   }
-  imperativeFemininePluralEnglish() {
-    return this.present + "! (F, P)";
+  ImperativePluralFeminineEnglish() {
+    return this.Present + "! (F, P)";
   }
 }

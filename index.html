@@ -12,6 +12,9 @@
     <!-- <div id="all"></div> -->
      <div id="prompt">
       <button id="start">Get Random Verb</button>
+      <br>
+      <input type="checkbox" id="english" name="english" value="english">
+      <label for="english">Prompt with English</label>
       <p id="question"></p>
       <div id="details">
         <p id="person"></p>
@@ -126,6 +129,7 @@
 
 
   <div id="tenses">
+    <p class="labels">Tenses</p>
     <input type="checkbox" id="present" name="present" value="present">
     <label for="present">Present Tense</label>
     <input type="checkbox" id="past" name="past" value="past">
@@ -137,6 +141,32 @@
     <input type="checkbox" id="femfuture" name="femfuture" value="femfuture">
     <label for="femfuture">Add feminine plural future</label>
   </div>
+
+  <div id="genders">
+    <p class="labels">Genders</p>
+    <input type="checkbox" id="masculine" name="masculine" value="masculine">
+    <label for="masculine">Masculine</label>
+    <input type="checkbox" id="feminine" name="feminine" value="feminine">
+    <label for="feminine">Feminine</label>
+  </div>
+
+  <div id="number">
+    <p class="labels">Number</p>
+    <input type="checkbox" id="singular" name="singular" value="singular">
+    <label for="singular">Singular</label>
+    <input type="checkbox" id="plural" name="plural" value="plural">
+    <label for="plural">Plural</label>
+  </div>
+
+  <div id="person">
+    <p class="labels">Person</p>
+    <input type="checkbox" id="first" name="first" value="first">
+    <label for="first">First Person</label>
+    <input type="checkbox" id="second" name="second" value="second">
+    <label for="second">Second Person</label>
+    <input type="checkbox" id="third" name="third" value="third">
+    <label for="third">Third Person</label>
+  </div>
   </body>
   <script src="paal/paal-shlemim-efol.js"></script>
   
@@ -145,7 +175,8 @@
   <script src="constants/input.js"></script>
   <script src="scripts/check.js"></script>
   <script src="paal/paal-shlemim-efol-test.js"></script>
-  <script src="scripts/getQuestion.js"></script>
   
+  <script src="scripts/getQuestion.js"></script>
+  <script src="constants/conjugationlists.js"></script>
   <script src="currtest.js"></script>
 </html>

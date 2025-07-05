@@ -1,103 +1,17 @@
-EVERY GZERA SHOULD HAVE:
-____________________________
-INFINITIVES
+EVERY FUNCTION IS DONE LIKE THIS:
 
-infinitive()
-infinitiveEnglish()
+TENSE 
+Present, Past, Future, Imperative
 
-_______________________________
+PERSON
+First, Second, Third
+(irrelevant in imperative and present!)
 
-PRESENT TENSE
+NUMBER
+Singular, Plural
 
-presentMascSing()
-presentMascSingEnglish()
+GENDER
+Masculine, Feminine
+(irrelevant in first person past/future, third person plural past)
 
-presentFemSing()
-presentFemSingEnglish()
-
-presentMascPlural()
-presentMascPluralEnglish()
-
-presentFemPlural()
-presentFemPluralEnglish()
-
-_______________________________
-
-PAST TENSE
-
-pastFirstSingular()
-pastFirstSingularEnglish()
-
-pastSecondSingularMale()
-pastSecondSingularMaleEnglish()
-
-pastSecondSingularFemale()
-pastSecondSingularFemaleEnglish()
-
-pastThirdSingularMale()
-pastThirdSingularMaleEnglish()
-
-pastThirdSingularFemale()
-pastThirdSingularFemaleEnglish()
-
-pastFirstPersonPlural()
-pastFirstPersonPluralEnglish()
-
-pastSecondPluralMale()
-pastSecondPluralMaleEnglish()
-
-pastSecondPluralFemale() 
-pastSecondPluralFemaleEnglish()
-
-pastThirdPlural()
-pastThirdPluralEnglish()
-
-_______________________________
-
-FUTURE
-
-futureFirstSing()
-futureFirstSingEnglish()
-
-futureSecondMasculineSing()
-futureSecondMasculineSingEnglish()
-
-futureSecondFeminineSing()
-futureSecondFeminineSingEnglish()
-
-futureThirdMasculineSing()
-futureThirdMasculineSingEnglish()
-
-futureThirdFeminineSing()
-futureThirdFeminineSingEnglish()
-
-futureFirstPlural()
-futureFirstPluralEnglish()
-
-futureSecondMascPlural()
-futureSecondMascPluralEnglish()
-
-futureSecondFemininePlural()
-futureSecondFemininePluralEnglish()
-
-futureThirdPlural()
-futureThirdPluralEnglish()
-
-futureThirdFemininePlural()
-futureThirdFemininePluralEnglish()
-
-_______________________________
-
-IMPERATIVE
-
-imperativeMasculine()
-imperativeMasculineEnglish()
-
-imperativeFeminine()
-imperativeFeminineEnglish()
-
-imperativePlural()
-imperativePluralEnglish()
-
-imperativeFemininePlural()
-imperativeFemininePluralEnglish()
+TO GET ENGLISH: ADD English AT THE END

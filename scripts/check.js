@@ -5,7 +5,8 @@ function check() {
   if (input.value == currAnswer) {
     result.innerHTML = "Correct.";
   } else {
-    result.innerHTML = "Wrong. The right answer is " + currAnswer + ".";
+    result.innerHTML =
+      "Wrong. The right answer is <span class='big'>" + currAnswer + "</span>.";
     console.log("inputted: " + input.value);
     console.log("correct: " + currAnswer);
     for (let i = 0; i < currAnswer.length; i++) {

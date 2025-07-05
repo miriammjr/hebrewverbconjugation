@@ -72,3 +72,12 @@ button {
 #clear {
   font-size: 25px;
 }
+
+.labels {
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.big {
+  font-size: 40px;
+}
