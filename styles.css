@@ -81,3 +81,33 @@ button {
 .big {
   font-size: 40px;
 }
+
+#choose {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0;
+  top: 0;
+}
+
+/* The Close Button */
+#chooseClose {
+  font-size: 20px;
+}
+
+#chooseContent {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  padding: 50px;
+}

@@ -1,14 +1,15 @@
 // TESTS פעל שלמים אפעול for dageshim etc.
 // will alert if any fails
-const test1 = new PaalShlemimEfol(
+const test1 = new PaalShlemimEfol([
   "ב",
   "ת",
   "כ",
   "כְּתִיבָה",
   "write",
   "writes",
-  "wrote"
-);
+  "wrote",
+  "writing",
+]);
 
 if (test1.infinitive() != "לִכְתֹּב") {
   alert("Failed at infinitive");

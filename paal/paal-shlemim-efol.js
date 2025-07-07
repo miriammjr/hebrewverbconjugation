@@ -1,7 +1,7 @@
 // PAAL SHLEMIM EFOL
 
 class PaalShlemimEfol {
-  constructor(a, b, c, gerund, Present, Presentthird, Past) {
+  constructor([a, b, c, gerund, Present, Presentthird, Past, EnglishGerund]) {
     this.root1 = a;
     this.root2 = b;
     this.root3 = c;
@@ -11,6 +11,7 @@ class PaalShlemimEfol {
     this.Past = Past;
     this.verbType = "פעל";
     this.gzera = "שלמים (אפעול)";
+    this.EnglishGerund = EnglishGerund;
 
     if (dageshkal.includes(this.root1)) {
       this.root1dagesh = this.root1 + "\u{05BC}";
@@ -27,6 +28,20 @@ class PaalShlemimEfol {
     } else {
       this.root3dagesh = this.root3;
     }
+
+    if (this.root1 == "מ") {
+      this.root1final = "ם";
+    } else if (this.root1 == "כ") {
+      this.root1final = "ך";
+    } else if (this.root1 == "נ") {
+      this.root1final = "ן";
+    } else if (this.root1 == "צ") {
+      this.root1final = "ץ";
+    } else if (this.root1 == "פ") {
+      this.root1final = "ף";
+    } else {
+      this.root1final = this.root1;
+    }
   }
 
   // לִ +
@@ -40,7 +55,7 @@ class PaalShlemimEfol {
       "\u{05B0}" +
       this.root2dagesh +
       "\u{05B9}" +
-      this.root1
+      this.root1final
     );
   }
 
@@ -50,7 +65,7 @@ class PaalShlemimEfol {
   // root 2: צירי, no dagesh
   // root 3: no vowel, no dagesh
   PresentSingularMasculine() {
-    return this.root3dagesh + "וֹ" + this.root2 + "\u{05B5}" + this.root1;
+    return this.root3dagesh + "וֹ" + this.root2 + "\u{05B5}" + this.root1final;
   }
 
   // root 1: no vowel, dagesh
@@ -150,7 +165,9 @@ class PaalShlemimEfol {
   // root 2: patakh
   // root 3: none
   PastThirdSingularMasculine() {
-    return this.root3dagesh + "\u{05B8}" + this.root2 + "\u{05B7}" + this.root1;
+    return (
+      this.root3dagesh + "\u{05B8}" + this.root2 + "\u{05B7}" + this.root1final
+    );
   }
 
   // root 1: kamatz, dagesh
@@ -396,7 +413,9 @@ class PaalShlemimEfol {
   // root 2: add  holam
   // root 3: none
   ImperativeSingularMasculine() {
-    return this.root3dagesh + "\u{05B0}" + this.root2 + "\u{05B9}" + this.root1;
+    return (
+      this.root3dagesh + "\u{05B0}" + this.root2 + "\u{05B9}" + this.root1final
+    );
   }
 
   // root 1: add khirik, dagesh

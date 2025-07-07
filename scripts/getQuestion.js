@@ -180,14 +180,14 @@ function getVerb() {
   }
 
   currAnswer = eval(
-    `test1.${currTense}${currPerson}${currNumber}${currGender}()`
+    `currVerb.${currTense}${currPerson}${currNumber}${currGender}()`
   );
   if (englishBox.checked) {
     question.innerHTML = eval(
-      `test1.${currTense}${currPerson}${currNumber}${currGender}English()`
+      `currVerb.${currTense}${currPerson}${currNumber}${currGender}English()`
     );
   } else {
-    question.innerHTML = test1.infinitive();
+    question.innerHTML = currVerb.infinitive();
   }
   // console.log(`${currTense}${currPerson}${currNumber}${currGender}()`);
 }

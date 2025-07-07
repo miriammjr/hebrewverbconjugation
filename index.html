@@ -11,10 +11,12 @@
     <h1>Test - only prompts with לכתוב</h1>
     <!-- <div id="all"></div> -->
      <div id="prompt">
-      <button id="start">Get Random Verb</button>
+      <button id="start">Get Verb Conjugation</button>
       <br>
       <input type="checkbox" id="english" name="english" value="english">
       <label for="english">Prompt with English</label>
+      <br>
+      <button id="choose">Choose Verb</button>
       <p id="question"></p>
       <div id="details">
         <p id="person"></p>
@@ -23,7 +25,17 @@
         <p id="tense"></p>
         <p id="result"></p>
       </div>
+      <div id="chooseModal" class="modal">
+        <div id="chooseContent">
+          <p>Test</p>
+          <div id="verbList">
+            
+          </div>
+          <br>
+          <button id="chooseClose">Close</button>
+        </div>
 
+      </div>
      </div>
     <div id="textbox">
       <input type="text" id="input"/>
@@ -172,11 +184,13 @@
   
   <script src="constants/letters.js"></script>
   <script src="constants/vowels.js"></script>
+  <script src="constants/paal-shlemim-efol-verbs.js"></script>
   <script src="constants/input.js"></script>
   <script src="scripts/check.js"></script>
   <script src="paal/paal-shlemim-efol-test.js"></script>
   
   <script src="scripts/getQuestion.js"></script>
   <script src="constants/conjugationlists.js"></script>
+  <script src="scripts/chooseVerb.js"></script>
   <script src="currtest.js"></script>
 </html>
