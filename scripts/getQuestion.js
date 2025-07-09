@@ -179,6 +179,16 @@ function getVerb() {
     gender.innerHTML = currGender;
   }
 
+  let currVerb;
+  if (currVerbList.length == 0) {
+    currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[0]);
+  } else {
+    x = Math.floor(Math.random() * currVerbList.length);
+    console.log(currVerbList);
+
+    currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[currVerbList[x]]);
+  }
+
   currAnswer = eval(
     `currVerb.${currTense}${currPerson}${currNumber}${currGender}()`
   );

@@ -4,17 +4,22 @@ const close = document.getElementById("chooseClose");
 const chooseContent = document.getElementById("chooseContent");
 const verbList = document.getElementById("verbList");
 
-let currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[0]);
+// let currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[0]);
+let currVerbList = [];
 
 for (let i = 0; i < PaalShlemimEfolVerbs.length; i++) {
   verbList.innerHTML =
     verbList.innerHTML +
-    `<input type="radio" class="verblistverbs" name="current verb" value=${i} onclick="selectVerbs(${i})">
+    `<input type="checkbox" class="verblistverbs" name="current verb" value=${i} onclick="selectVerbs(${i})">
        <label>${PaalShlemimEfolVerbs[i][2]}${PaalShlemimEfolVerbs[i][1]}${PaalShlemimEfolVerbs[i][0]} (${PaalShlemimEfolVerbs[i][4]})</label>`;
 }
 
 function selectVerbs(value) {
-  currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[value]);
+  if (currVerbList.includes(value)) {
+    currVerbList.splice(currVerbList.indexOf(value), 1);
+  } else {
+    currVerbList.push(value);
+  }
 }
 
 choose.onclick = function () {
