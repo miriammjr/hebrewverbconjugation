@@ -30,6 +30,8 @@ button {
 #letters {
   padding-bottom: 10px;
   display: none;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
 }
 
 #details p {
@@ -110,4 +112,15 @@ button {
   height: 100%;
   margin: auto;
   padding: 50px;
+}
+
+#verblist {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.verb {
+  /* border: 5px solid black; */
 }

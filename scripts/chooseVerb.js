@@ -10,8 +10,10 @@ let currVerbList = [];
 for (let i = 0; i < PaalShlemimEfolVerbs.length; i++) {
   verbList.innerHTML =
     verbList.innerHTML +
-    `<input type="checkbox" class="verblistverbs" name="current verb" value=${i} onclick="selectVerbs(${i})">
-       <label>${PaalShlemimEfolVerbs[i][2]}${PaalShlemimEfolVerbs[i][1]}${PaalShlemimEfolVerbs[i][0]} (${PaalShlemimEfolVerbs[i][4]})</label>`;
+    `<div class="verb">
+    <input type="checkbox" class="verblistverbs" name="current verb" value=${i} onclick="selectVerbs(${i})">
+       <label>${PaalShlemimEfolVerbs[i][2]}${PaalShlemimEfolVerbs[i][1]}${PaalShlemimEfolVerbs[i][0]} (${PaalShlemimEfolVerbs[i][4]})</label>
+       </div>`;
 }
 
 function selectVerbs(value) {

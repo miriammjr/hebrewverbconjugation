@@ -62,7 +62,7 @@ function checkLetters() {
   const showLetters = document.getElementById("showLetters");
 
   if (showLetters.checked == true) {
-    document.getElementById("letters").style.display = "block";
+    document.getElementById("letters").style.display = "flex";
   } else {
     document.getElementById("letters").style.display = "none";
   }
