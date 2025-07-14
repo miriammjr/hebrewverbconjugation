@@ -8,15 +8,20 @@
     />
   </head>
   <body onload="clearInput()">
-    <h1>Test - only prompts with לכתוב</h1>
+    <h1>Test - only offers some Pa'al Verbs</h1>
     <!-- <div id="all"></div> -->
-     <div id="prompt">
+    <div id="prompt">
       <button id="start">Get Verb Conjugation</button>
-      <br>
-      <input type="checkbox" id="english" name="english" value="english">
+      <br />
+      <input
+        type="checkbox"
+        id="english"
+        name="english"
+        value="english"
+      />
       <label for="english">Prompt with English</label>
-      <br>
-      <button id="choose">Choose Verb</button>
+      <br />
+
       <p id="question"></p>
       <div id="details">
         <p id="person"></p>
@@ -25,172 +30,478 @@
         <p id="tense"></p>
         <p id="result"></p>
       </div>
-      <div id="chooseModal" class="modal">
+      <div
+        id="chooseModal"
+        class="modal"
+      >
         <div id="chooseContent">
-          <p>Test</p>
-          <div id="verbList">
-            
-          </div>
-          <br>
-          <button id="chooseClose">Close</button>
+          <p>פעל - שלמים (אפעול)</p>
+          <div id="verbList"></div>
+          <br />
+          <button
+            class="chooseClose"
+            id="verbClose"
+          >
+            Close
+          </button>
         </div>
-
       </div>
-     </div>
+    </div>
     <div id="textbox">
-      <input type="text" id="input"/>
+      <input
+        type="text"
+        id="input"
+      />
       <button id="check">Check</button>
-      <br>
+      <br />
       <button id="backspace">Backspace</button>
       <button id="clear">Clear</button>
     </div>
     <div id="letters">
-      
-      <button id="tav" class="letter" value="ת">ת</button>
-      <button id="sin"  class="letter" value="שׂ">שׂ</button>
-      <button id="shin"  class="letter" value="שׁ">שׁ</button>
-      <button id="resh"  class="letter" value="ר">ר</button>
-      <button id="kof"  class="letter" value="ק">ק</button>
-      <button id="tsadisofit" class="letter"  value="ץ">ץ</button>
-      <button id="tsadi"  class="letter" value="צ">צ</button>
-      <button id="pesofit"  class="letter" value="ף">ף</button>
-      <button id="pe"  class="letter" value="פ">פ</button>
-      <button id="ayin"  class="letter" value="ע">ע</button>
-      <button id="samekh"  class="letter" value="ס">ס</button>
-      <button id="nunsofit"  class="letter" value="ן">ן</button>
-      <button id="nun"  class="letter" value="נ">נ</button>
-      <button id="memsofit" class="letter"  value="ם">ם</button>
-      <button id="mem"  class="letter" value="מ">מ</button>
-      <button id="lamed" class="letter" value="ל">ל</button>
-      <button id="kafsofit"  class="letter" value="ך">ך</button>
-      <button id="kaf"  class="letter" value="כ">כ</button>
-      <button id="yod"  class="letter" value="י">י</button>
-      <button id="tet"  class="letter" value="ט">ט</button>
-      <button id="khet"  class="letter" value="ח">ח</button>
-      <button id="zayin"  class="letter" value="ז">ז</button>
-      <button id="vav"  class="letter" value="ו">ו</button>
-      <button id="he"  class="letter" value="ה">ה</button>
-      <button id="dalet" class="letter"  value="ד">ד</button>
-      <button id="gimel" class="letter"  value="ג">ג</button>
-      <button id="bet"  class="letter" value="ב">ב</button>
-      <button id="alef"  class="letter" value="א">א</button>
-
+      <button
+        id="tav"
+        class="letter"
+        value="ת"
+      >
+        ת
+      </button>
+      <button
+        id="sin"
+        class="letter"
+        value="שׂ"
+      >
+        שׂ
+      </button>
+      <button
+        id="shin"
+        class="letter"
+        value="שׁ"
+      >
+        שׁ
+      </button>
+      <button
+        id="resh"
+        class="letter"
+        value="ר"
+      >
+        ר
+      </button>
+      <button
+        id="kof"
+        class="letter"
+        value="ק"
+      >
+        ק
+      </button>
+      <button
+        id="tsadisofit"
+        class="letter"
+        value="ץ"
+      >
+        ץ
+      </button>
+      <button
+        id="tsadi"
+        class="letter"
+        value="צ"
+      >
+        צ
+      </button>
+      <button
+        id="pesofit"
+        class="letter"
+        value="ף"
+      >
+        ף
+      </button>
+      <button
+        id="pe"
+        class="letter"
+        value="פ"
+      >
+        פ
+      </button>
+      <button
+        id="ayin"
+        class="letter"
+        value="ע"
+      >
+        ע
+      </button>
+      <button
+        id="samekh"
+        class="letter"
+        value="ס"
+      >
+        ס
+      </button>
+      <button
+        id="nunsofit"
+        class="letter"
+        value="ן"
+      >
+        ן
+      </button>
+      <button
+        id="nun"
+        class="letter"
+        value="נ"
+      >
+        נ
+      </button>
+      <button
+        id="memsofit"
+        class="letter"
+        value="ם"
+      >
+        ם
+      </button>
+      <button
+        id="mem"
+        class="letter"
+        value="מ"
+      >
+        מ
+      </button>
+      <button
+        id="lamed"
+        class="letter"
+        value="ל"
+      >
+        ל
+      </button>
+      <button
+        id="kafsofit"
+        class="letter"
+        value="ך"
+      >
+        ך
+      </button>
+      <button
+        id="kaf"
+        class="letter"
+        value="כ"
+      >
+        כ
+      </button>
+      <button
+        id="yod"
+        class="letter"
+        value="י"
+      >
+        י
+      </button>
+      <button
+        id="tet"
+        class="letter"
+        value="ט"
+      >
+        ט
+      </button>
+      <button
+        id="khet"
+        class="letter"
+        value="ח"
+      >
+        ח
+      </button>
+      <button
+        id="zayin"
+        class="letter"
+        value="ז"
+      >
+        ז
+      </button>
+      <button
+        id="vav"
+        class="letter"
+        value="ו"
+      >
+        ו
+      </button>
+      <button
+        id="he"
+        class="letter"
+        value="ה"
+      >
+        ה
+      </button>
+      <button
+        id="dalet"
+        class="letter"
+        value="ד"
+      >
+        ד
+      </button>
+      <button
+        id="gimel"
+        class="letter"
+        value="ג"
+      >
+        ג
+      </button>
+      <button
+        id="bet"
+        class="letter"
+        value="ב"
+      >
+        ב
+      </button>
+      <button
+        id="alef"
+        class="letter"
+        value="א"
+      >
+        א
+      </button>
     </div>
     <div id="vowels">
       <div class="vowelLabel">
-        <button id="dagesh"  class="letter" value="&#1468;"> &#1468; </button>
-        <br>
+        <button
+          id="dagesh"
+          class="letter"
+          value="&#1468;"
+        >
+          &#1468;
+        </button>
+        <br />
         <label for="dagesh">1</label>
       </div>
       <div class="vowelLabel">
-        <button id="shva"  class="letter" value="&#1456;"> &#1456; </button>
-        <br>
+        <button
+          id="shva"
+          class="letter"
+          value="&#1456;"
+        >
+          &#1456;
+        </button>
+        <br />
         <label for="shva">2</label>
       </div>
       <div class="vowelLabel">
-        
-        <button id="khirik"  class="letter" value="&#1460;"> &#1460; </button> 
-        <br> 
-        <label for="khirik">3</label>    
+        <button
+          id="khirik"
+          class="letter"
+          value="&#1460;"
+        >
+          &#1460;
+        </button>
+        <br />
+        <label for="khirik">3</label>
       </div>
       <div class="vowelLabel">
-        
-        <button id="kubutz"  class="letter" value="&#1467;"> &#1467;</button>
-        <br>
+        <button
+          id="kubutz"
+          class="letter"
+          value="&#1467;"
+        >
+          &#1467;
+        </button>
+        <br />
         <label for="kubutz">4</label>
       </div>
       <div class="vowelLabel">
-        
-        <button id="holam" class="letter" value="&#1465;"> &#1465;</button>
-        <br>
+        <button
+          id="holam"
+          class="letter"
+          value="&#1465;"
+        >
+          &#1465;
+        </button>
+        <br />
         <label for="holam">5</label>
       </div>
       <div class="vowelLabel">
-        
-        <button id="segol" class="letter"  value="&#1462;"> &#1462; </button>
-        <br>
+        <button
+          id="segol"
+          class="letter"
+          value="&#1462;"
+        >
+          &#1462;
+        </button>
+        <br />
         <label for="segol">6</label>
       </div>
       <div class="vowelLabel">
-        
-        <button id="tzere"  class="letter" value="&#1461;"> &#1461;</button>
-        <br>
+        <button
+          id="tzere"
+          class="letter"
+          value="&#1461;"
+        >
+          &#1461;
+        </button>
+        <br />
         <label for="tzere">7</label>
       </div>
       <div class="vowelLabel">
-        
-        <button id="kamatz" class="letter"  value="&#1464;"> &#1464; </button>
-        <br>
+        <button
+          id="kamatz"
+          class="letter"
+          value="&#1464;"
+        >
+          &#1464;
+        </button>
+        <br />
         <label for="kamatz">8</label>
       </div>
       <div class="vowelLabel">
-        
-        <button id="patakh"  class="letter" value="&#1463;"> &#1463;</button>
-        <br>
+        <button
+          id="patakh"
+          class="letter"
+          value="&#1463;"
+        >
+          &#1463;
+        </button>
+        <br />
         <label for="patakh">9</label>
       </div>
-      
-      <br>
-      
+
+      <br />
     </div>
-  </br> 
-  <input type="checkbox" id="showLetters" name="showLetters" value="showLetters" onclick="checkLetters()">
-  <label for="showLetters">Check to display on-screen letter buttons.</label>
-  <p class="note">Note: add dagesh (&#1468; ) before other nikkudot.</p>
-  <p class="note">Type "q" to type sin.</p>
 
+    <input
+      type="checkbox"
+      id="showLetters"
+      name="showLetters"
+      value="showLetters"
+      onclick="checkLetters()"
+    />
+    <label for="showLetters">Check to display on-screen letter buttons.</label>
+    <p class="note">Note: add dagesh (&#1468; ) before other nikkudot.</p>
+    <p class="note">Type "q" to type sin.</p>
+    <div class="modalButtons">
+      <button id="choose">Choose Verb</button>
+      <button id="chooseTense">Choose Tenses</button>
+    </div>
 
-  <div id="tenses">
-    <p class="labels">Tenses</p>
-    <input type="checkbox" id="present" name="present" value="present">
-    <label for="present">Present Tense</label>
-    <input type="checkbox" id="past" name="past" value="past">
-    <label for="past">Past Tense</label>
-    <input type="checkbox" id="future" name="future" value="future">
-    <label for="future">Future Tense</label>
-    <input type="checkbox" id="imperative" name="imperative" value="imperative">
-    <label for="imperative">Imperative Tense</label>
-    <input type="checkbox" id="femfuture" name="femfuture" value="femfuture">
-    <label for="femfuture">Add feminine plural future</label>
-  </div>
+    <div
+      id="tenseModal"
+      class="modal"
+    >
+      <div id="tenseContent">
+        <h2>Select which tenses to be tested on</h3>
+        <button id="allTenses">Select All</button>
+        <div id="tenses">
+          <p class="labels">Tenses</p>
+          <input
+            type="checkbox"
+            id="present"
+            name="present"
+            value="present"
+          />
+          <label for="present">Present Tense</label>
+          <input
+            type="checkbox"
+            id="past"
+            name="past"
+            value="past"
+          />
+          <label for="past">Past Tense</label>
+          <input
+            type="checkbox"
+            id="future"
+            name="future"
+            value="future"
+          />
+          <label for="future">Future Tense</label>
+          <input
+            type="checkbox"
+            id="imperative"
+            name="imperative"
+            value="imperative"
+          />
+          <label for="imperative">Imperative Tense</label>
+          <input
+            type="checkbox"
+            id="femfuture"
+            name="femfuture"
+            value="femfuture"
+          />
+          <label for="femfuture">Add feminine plural future</label>
+        </div>
 
-  <div id="genders">
-    <p class="labels">Genders</p>
-    <input type="checkbox" id="masculine" name="masculine" value="masculine">
-    <label for="masculine">Masculine</label>
-    <input type="checkbox" id="feminine" name="feminine" value="feminine">
-    <label for="feminine">Feminine</label>
-  </div>
+        <div id="genders">
+          <p class="labels">Genders</p>
+          <input
+            type="checkbox"
+            id="masculine"
+            name="masculine"
+            value="masculine"
+          />
+          <label for="masculine">Masculine</label>
+          <input
+            type="checkbox"
+            id="feminine"
+            name="feminine"
+            value="feminine"
+          />
+          <label for="feminine">Feminine</label>
+        </div>
 
-  <div id="number">
-    <p class="labels">Number</p>
-    <input type="checkbox" id="singular" name="singular" value="singular">
-    <label for="singular">Singular</label>
-    <input type="checkbox" id="plural" name="plural" value="plural">
-    <label for="plural">Plural</label>
-  </div>
+        <div id="number">
+          <p class="labels">Number</p>
+          <input
+            type="checkbox"
+            id="singular"
+            name="singular"
+            value="singular"
+          />
+          <label for="singular">Singular</label>
+          <input
+            type="checkbox"
+            id="plural"
+            name="plural"
+            value="plural"
+          />
+          <label for="plural">Plural</label>
+        </div>
 
-  <div id="person">
-    <p class="labels">Person</p>
-    <input type="checkbox" id="first" name="first" value="first">
-    <label for="first">First Person</label>
-    <input type="checkbox" id="second" name="second" value="second">
-    <label for="second">Second Person</label>
-    <input type="checkbox" id="third" name="third" value="third">
-    <label for="third">Third Person</label>
-  </div>
+        <div id="person">
+          <p class="labels">Person</p>
+          <input
+            type="checkbox"
+            id="first"
+            name="first"
+            value="first"
+          />
+          <label for="first">First Person</label>
+          <input
+            type="checkbox"
+            id="second"
+            name="second"
+            value="second"
+          />
+          <label for="second">Second Person</label>
+          <input
+            type="checkbox"
+            id="third"
+            name="third"
+            value="third"
+          />
+          <label for="third">Third Person</label>
+        </div>
+        <br />
+        <button
+          class="chooseClose"
+          id="tenseClose"
+        >
+          Close
+        </button>
+      </div>
+    </div>
   </body>
   <script src="paal/paal-shlemim-efol.js"></script>
-  
+
   <script src="constants/letters.js"></script>
   <script src="constants/vowels.js"></script>
   <script src="constants/paal-shlemim-efol-verbs.js"></script>
   <script src="constants/input.js"></script>
   <script src="scripts/check.js"></script>
   <script src="paal/paal-shlemim-efol-test.js"></script>
-  
+
   <script src="scripts/getQuestion.js"></script>
   <script src="constants/conjugationlists.js"></script>
   <script src="scripts/chooseVerb.js"></script>
+  <script src="scripts/chooseTenses.js"></script>
   <script src="currtest.js"></script>
 </html>

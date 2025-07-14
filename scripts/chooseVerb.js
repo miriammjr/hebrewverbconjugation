@@ -1,6 +1,6 @@
 const choose = document.getElementById("choose");
 const chooseModal = document.getElementById("chooseModal");
-const close = document.getElementById("chooseClose");
+const verbClose = document.getElementById("verbClose");
 const chooseContent = document.getElementById("chooseContent");
 const verbList = document.getElementById("verbList");
 
@@ -28,6 +28,6 @@ choose.onclick = function () {
   chooseModal.style.display = "block";
 };
 
-close.onclick = function () {
+verbClose.onclick = function () {
   chooseModal.style.display = "none";
 };

@@ -17,7 +17,6 @@ const pluralBox = document.getElementById("plural");
 
 const masculineBox = document.getElementById("masculine");
 const feminineBox = document.getElementById("feminine");
-const neutralBox = document.getElementById("neutral");
 
 const firstBox = document.getElementById("first");
 const secondBox = document.getElementById("second");
@@ -193,6 +192,10 @@ function getVerb() {
     `currVerb.${currTense}${currPerson}${currNumber}${currGender}()`
   );
   if (englishBox.checked) {
+    gender.innerHTML = "";
+    number.innerHTML = "";
+    person.innerHTML = "";
+    tense.innerHTML = "";
     question.innerHTML = eval(
       `currVerb.${currTense}${currPerson}${currNumber}${currGender}English()`
     );
