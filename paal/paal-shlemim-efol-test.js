@@ -171,16 +171,16 @@ if (test1.FutureThirdPluralMasculineEnglish() != "They (M/N) will write") {
 if (test1.FutureThirdPluralFeminineEnglish() != "They (F) will write") {
   alert("failed at third person plural Future feminine english");
 }
-if (test1.ImperativeSingularMasculineEnglish() != "write! (M, S)") {
+if (test1.ImperativeSingularMasculineEnglish() != "Write! (M, S)") {
   alert("failed at Imperative masculine english");
 }
-if (test1.ImperativeSingularFeminineEnglish() != "write! (F, S)") {
+if (test1.ImperativeSingularFeminineEnglish() != "Write! (F, S)") {
   alert("failed at Imperative feminine english");
 }
-if (test1.ImperativePluralMasculineEnglish() != "write! (M/N, P)") {
+if (test1.ImperativePluralMasculineEnglish() != "Write! (M/N, P)") {
   alert("failed at Imperative plural masculine english");
 }
-if (test1.ImperativePluralFeminineEnglish() != "write! (F, P)") {
+if (test1.ImperativePluralFeminineEnglish() != "Write! (F, P)") {
   alert(
     "failed at Imperative plural feminine english: " +
       test1.ImperativePluralFeminineEnglish()

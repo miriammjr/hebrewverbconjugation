@@ -543,15 +543,25 @@ class PaalShlemimEfol {
     return "They (F) will " + this.Present;
   }
   ImperativeSingularMasculineEnglish() {
-    return this.Present + "! (M, S)";
+    return (
+      this.Present.charAt(0).toUpperCase() + this.Present.slice(1) + "! (M, S)"
+    );
   }
   ImperativeSingularFeminineEnglish() {
-    return this.Present + "! (F, S)";
+    return (
+      this.Present.charAt(0).toUpperCase() + this.Present.slice(1) + "! (F, S)"
+    );
   }
   ImperativePluralMasculineEnglish() {
-    return this.Present + "! (M/N, P)";
+    return (
+      this.Present.charAt(0).toUpperCase() +
+      this.Present.slice(1) +
+      "! (M/N, P)"
+    );
   }
   ImperativePluralFeminineEnglish() {
-    return this.Present + "! (F, P)";
+    return (
+      this.Present.charAt(0).toUpperCase() + this.Present.slice(1) + "! (F, P)"
+    );
   }
 }
