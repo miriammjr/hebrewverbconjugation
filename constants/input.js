@@ -54,6 +54,12 @@ document.addEventListener("keydown", (event) => {
       event.preventDefault();
     } else if (event.key === "w") {
       event.preventDefault();
+    } else if (event.key === "ש") {
+      addText("שׁ");
+      event.preventDefault();
+    } else if (event.key === "/") {
+      addText("שׂ");
+      event.preventDefault();
     }
   }
 });
