@@ -32,13 +32,25 @@ class verbBasis {
     return "She " + this.Presentthird;
   }
   PresentPluralMasculineEnglish() {
-    return "They (M) " + this.Present;
+    if (this.Present.includes("be ") && this.Presentthird.includes("is ")) {
+      return "They (M) are " + this.Present.slice(3);
+    } else {
+      return "They (M) " + this.Present;
+    }
   }
   PresentPluralFeminineEnglish() {
-    return "They (F) " + this.Present;
+    if (this.Present.includes("be ") && this.Presentthird.includes("is ")) {
+      return "They (F) are " + this.Present.slice(3);
+    } else {
+      return "They (F) " + this.Present;
+    }
   }
   PastFirstSingularEnglish() {
-    return "I " + this.Past;
+    if (this.Present.includes("be ") && this.Presentthird.includes("is ")) {
+      return "I was " + this.Present.slice(3);
+    } else {
+      return "I " + this.Past;
+    }
   }
   PastSecondSingularMasculineEnglish() {
     return "You (M, S) " + this.Past;
@@ -47,10 +59,18 @@ class verbBasis {
     return "You (F, S) " + this.Past;
   }
   PastThirdSingularMasculineEnglish() {
-    return "He " + this.Past;
+    if (this.Present.includes("be ") && this.Presentthird.includes("is ")) {
+      return "He was " + this.Present.slice(3);
+    } else {
+      return "He " + this.Past;
+    }
   }
   PastThirdSingularFeminineEnglish() {
-    return "She " + this.Past;
+    if (this.Present.includes("be ") && this.Presentthird.includes("is ")) {
+      return "She was " + this.Present.slice(3);
+    } else {
+      return "She " + this.Past;
+    }
   }
   PastFirstPluralEnglish() {
     return "We " + this.Past;
