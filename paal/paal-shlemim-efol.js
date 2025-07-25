@@ -13,35 +13,10 @@ class PaalShlemimEfol {
     this.gzera = "שלמים (אפעול)";
     this.EnglishGerund = EnglishGerund;
 
-    if (dageshkal.includes(this.root1)) {
-      this.root1dagesh = this.root1 + "\u{05BC}";
-    } else {
-      this.root1dagesh = this.root1;
-    }
-    if (dageshkal.includes(this.root2)) {
-      this.root2dagesh = this.root2 + "\u{05BC}";
-    } else {
-      this.root2dagesh = this.root2;
-    }
-    if (dageshkal.includes(this.root3)) {
-      this.root3dagesh = this.root3 + "\u{05BC}";
-    } else {
-      this.root3dagesh = this.root3;
-    }
-
-    if (this.root1 == "מ") {
-      this.root1final = "ם";
-    } else if (this.root1 == "כ") {
-      this.root1final = "ך";
-    } else if (this.root1 == "נ") {
-      this.root1final = "ן";
-    } else if (this.root1 == "צ") {
-      this.root1final = "ץ";
-    } else if (this.root1 == "פ") {
-      this.root1final = "ף";
-    } else {
-      this.root1final = this.root1;
-    }
+    this.root1dagesh = getDagesh(this.root1);
+    this.root2dagesh = getDagesh(this.root2);
+    this.root3dagesh = getDagesh(this.root3);
+    this.root1final = getFinal(this.root1);
   }
 
   // לִ +
@@ -275,7 +250,7 @@ class PaalShlemimEfol {
       "\u{05B0}" +
       this.root2dagesh +
       "\u{05B9}" +
-      this.root1
+      this.root1final
     );
   }
 
