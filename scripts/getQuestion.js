@@ -179,13 +179,23 @@ function getVerb() {
   }
 
   let currVerb;
-  if (currVerbList.length == 0) {
+  if (currEfolVerbList.length == 0 && currEfalVerbList.length == 0) {
     currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[0]);
   } else {
-    x = Math.floor(Math.random() * currVerbList.length);
-    console.log(currVerbList);
-
-    currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[currVerbList[x]]);
+    if (currEfolVerbList.length == 0) {
+      y = 1;
+    } else if (currEfalVerbList.length == 0) {
+      y = 0;
+    } else {
+      y = Math.floor(Math.random() * 2);
+    }
+    if (y == 0) {
+      x = Math.floor(Math.random() * currEfolVerbList.length);
+      currVerb = new PaalShlemimEfal(PaalShlemimEfolVerbs[currEfolVerbList[x]]);
+    } else if (y == 1) {
+      x = Math.floor(Math.random() * currEfalVerbList.length);
+      currVerb = new PaalShlemimEfal(PaalShlemimEfalVerbs[currEfalVerbList[x]]);
+    }
   }
 
   currAnswer = eval(
