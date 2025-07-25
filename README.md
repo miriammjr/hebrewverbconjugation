@@ -10,3 +10,5 @@ TO DO:
 
 add all the other ef'ol verbs
 figure something else out bc this is going to stink when i add in all 200+ verb tables :D 
+test infinitives
+make a better randomisation strategy
