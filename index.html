@@ -30,22 +30,6 @@
         <p id="tense"></p>
         <p id="result"></p>
       </div>
-      <div
-        id="chooseModal"
-        class="modal"
-      >
-        <div id="chooseContent">
-          <p>פעל - שלמים (אפעול)</p>
-          <div id="verbList"></div>
-          <br />
-          <button
-            class="chooseClose"
-            id="verbClose"
-          >
-            Close
-          </button>
-        </div>
-      </div>
     </div>
     <div id="textbox">
       <input
@@ -488,6 +472,23 @@
           Close
         </button>
       </div>
+    </div>
+
+    <div
+        id="chooseModal"
+        class="modal"
+      >
+        <div id="chooseContent">
+          <button type="button" class="collapsible" id="paalShlemimCollapsible">פעל - שלמים (אפעול)</button>
+          <div id="paalShlemimVerbList" class="verbList"></div>
+          <br />
+          <button
+            class="chooseClose"
+            id="verbClose"
+          >
+            Close
+          </button>
+        </div>
     </div>
   </body>
   <script src="verbBasis.js"></script>

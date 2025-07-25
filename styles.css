@@ -110,14 +110,18 @@ button {
   padding: 50px;
 }
 
-#verblist {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-end;
+.modal .verblist {
+  display: none;
 }
 
 .modalButtons button {
   font-size: 25px;
   margin-top: 20px;
+}
+
+.collapsible {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  font-size: 20;
 }

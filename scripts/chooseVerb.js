@@ -2,14 +2,27 @@ const choose = document.getElementById("choose");
 const chooseModal = document.getElementById("chooseModal");
 const verbClose = document.getElementById("verbClose");
 const chooseContent = document.getElementById("chooseContent");
-const verbList = document.getElementById("verbList");
+const paalShlemimCollapsible = document.getElementById(
+  "paalShlemimCollapsible"
+);
+const paalShlemimVerbList = document.getElementById("paalShlemimVerbList");
 
 // let currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[0]);
 let currVerbList = [];
 
+paalShlemimVerbList.style.display = "none";
+
+paalShlemimCollapsible.addEventListener("click", function () {
+  if (paalShlemimVerbList.style.display === "block") {
+    paalShlemimVerbList.style.display = "none";
+  } else {
+    paalShlemimVerbList.style.display = "block";
+  }
+});
+
 for (let i = 0; i < PaalShlemimEfolVerbs.length; i++) {
-  verbList.innerHTML =
-    verbList.innerHTML +
+  paalShlemimVerbList.innerHTML =
+    paalShlemimVerbList.innerHTML +
     `<div class="verb">
     <input type="checkbox" class="verblistverbs" name="current verb" value=${i} onclick="selectVerbs(${i})">
        <label>${PaalShlemimEfolVerbs[i][2]}${PaalShlemimEfolVerbs[i][1]}${PaalShlemimEfolVerbs[i][0]} (${PaalShlemimEfolVerbs[i][4]})</label>
