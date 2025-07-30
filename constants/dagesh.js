@@ -7,7 +7,7 @@ function getDagesh(x) {
 }
 
 function getFinal(x) {
-  console.log(x);
+  // console.log(x);
 
   if (x == "מ") {
     return "ם";

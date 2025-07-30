@@ -178,24 +178,26 @@ function getVerb() {
     gender.innerHTML = currGender;
   }
 
-  let currVerb;
-  if (currEfolVerbList.length == 0 && currEfalVerbList.length == 0) {
-    currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[0]);
-  } else {
-    if (currEfolVerbList.length == 0) {
-      y = 1;
-    } else if (currEfalVerbList.length == 0) {
-      y = 0;
-    } else {
-      y = Math.floor(Math.random() * 2);
+  let currVerb = new PaalShlemimEfol(PaalShlemimEfolVerbs[0]);
+  let currTotalSelected = 0;
+  for (let i = 0; i < conjugationList.length; i++) {
+    currTotalSelected = currTotalSelected + selectedVerbs[i].length;
+  }
+
+  let y = 0;
+  let i = 0;
+  if (currTotalSelected > 0) {
+    y = Math.floor(Math.random() * currTotalSelected + 1);
+    while (y > selectedVerbs[i].length) {
+      y = y - selectedVerbs[i].length;
+      i++;
     }
-    if (y == 0) {
-      x = Math.floor(Math.random() * currEfolVerbList.length);
-      currVerb = new PaalShlemimEfal(PaalShlemimEfolVerbs[currEfolVerbList[x]]);
-    } else if (y == 1) {
-      x = Math.floor(Math.random() * currEfalVerbList.length);
-      currVerb = new PaalShlemimEfal(PaalShlemimEfalVerbs[currEfalVerbList[x]]);
-    }
+
+    currVerb = eval(
+      `new ${conjugationList[i]}(${
+        conjugationList[i]
+      }Verbs[selectedVerbs[${i}][${y - 1}]])`
+    );
   }
 
   currAnswer = eval(
@@ -212,7 +214,6 @@ function getVerb() {
   } else {
     question.innerHTML = currVerb.infinitive();
   }
-  // console.log(`${currTense}${currPerson}${currNumber}${currGender}()`);
 }
 
 start.addEventListener("click", (event) => getVerb());

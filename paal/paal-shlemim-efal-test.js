@@ -21,12 +21,12 @@ const test3 = new PaalShlemimEfal([
 
 if (test2.infinitive() != "לִשְׁכַּב") {
   alert("Paal Shlemim Efal - failed at infinitive for לִשְׁכַּב");
-  console.log(test2.infinitive());
+  // console.log(test2.infinitive());
 }
 
 if (test3.infinitive() != "לִלְמֹד") {
   alert("Paal Shlemim Efal - failed at infinitive");
-  console.log(test3.infinitive());
+  // console.log(test3.infinitive());
 }
 
 if (test3.FutureFirstSingular() != "אֶלְמַד") {
@@ -101,14 +101,14 @@ if (test4.PresentPluralMasculineEnglish() != "They (M) are right") {
 
 if (test4.PastFirstSingularEnglish() != "I was right") {
   alert("Paal Shlemim Efal - failed at english past sing");
-  console.log(test4.PastFirstSingularEnglish());
+  // console.log(test4.PastFirstSingularEnglish());
 }
 
 if (test4.PastThirdSingularMasculineEnglish() != "He was right") {
   alert("Paal Shlemim Efal - failed at english past sing");
-  console.log(test4.PastThirdSingularMasculine());
+  // console.log(test4.PastThirdSingularMasculine());
 }
 if (test4.PastThirdSingularFeminineEnglish() != "She was right") {
   alert("Paal Shlemim Efal - failed at english past sing");
-  console.log(test4.PastThirdSingularFeminineEnglish());
+  // console.log(test4.PastThirdSingularFeminineEnglish());
 }
