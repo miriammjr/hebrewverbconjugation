@@ -9,6 +9,8 @@ const dagesh = document.getElementById("dagesh");
 const kamatz = document.getElementById("kamatz");
 const kubutz = document.getElementById("kubutz");
 const reducedSegol = document.getElementById("reduced-segol");
+const reducedPatakh = document.getElementById("reduced-patakh");
+const reducedKamatz = document.getElementById("reduced-kamatz");
 const vowels = [
   reducedSegol,
   dagesh,
@@ -20,6 +22,8 @@ const vowels = [
   tzere,
   kamatz,
   patakh,
+  reducedKamatz,
+  reducedPatakh,
 ];
 
 for (let i = 0; i < vowels.length; i++) {

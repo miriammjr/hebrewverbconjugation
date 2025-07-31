@@ -27,6 +27,12 @@ document.addEventListener("keydown", (event) => {
     if (parseInt(event.key) >= 0 && parseInt(event.key) < 10) {
       addText(vowels[event.key].value);
       event.preventDefault();
+    } else if (event.key == "-") {
+      addText(vowels[10].value);
+      event.preventDefault();
+    } else if (event.key == "=") {
+      addText(vowels[11].value);
+      event.preventDefault();
     } else if (event.key == "Escape") {
       clearInput();
     } else if (event.key == "Enter") {

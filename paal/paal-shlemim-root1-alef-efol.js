@@ -8,5 +8,10 @@ class PaalShlemimRoot1AlefEfol extends PaalShlemimEfol {
   // לֶאֱ +
   // root 2 + holam +
   // root 3
-  infinitive() {}
+  infinitive() {
+    return "לֶאֱ" + root2 + "\u{05B9}" + root1final;
+  }
+
+  // root 1 +
+  PastSecondPluralMasculine() {}
 }
