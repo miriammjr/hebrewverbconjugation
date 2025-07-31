@@ -24,8 +24,8 @@ backspace.addEventListener("click", (event) => deleteButton());
 
 document.addEventListener("keydown", (event) => {
   if (!event.ctrlKey) {
-    if (parseInt(event.key) >= 1 && parseInt(event.key) < 10) {
-      addText(vowels[event.key - 1].value);
+    if (parseInt(event.key) >= 0 && parseInt(event.key) < 10) {
+      addText(vowels[event.key].value);
       event.preventDefault();
     } else if (event.key == "Escape") {
       clearInput();

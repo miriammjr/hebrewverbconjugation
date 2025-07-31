@@ -8,7 +8,9 @@ const patakh = document.getElementById("patakh");
 const dagesh = document.getElementById("dagesh");
 const kamatz = document.getElementById("kamatz");
 const kubutz = document.getElementById("kubutz");
+const reducedSegol = document.getElementById("reduced-segol");
 const vowels = [
+  reducedSegol,
   dagesh,
   shva,
   khirik,
